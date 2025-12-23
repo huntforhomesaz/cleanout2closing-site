@@ -1,0 +1,17 @@
+{
+  "name": "cleanout2closing-site",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Cleanout2Closing estate transition services website - Tucson, AZ",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.cleanout2closing.com/*"
+  to = "https://cleanout2closing.com/:splat"
+  status = 301
+  force = true
+
+# Handle SPA fallback (if needed in future)
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 404
+
+# Form notifications - configure in Netlify dashboard
+# Webhook URL should be set via environment variable or Netlify UI
+# n8n endpoint: https://{n8n-host}/webhook/c2c-contact
