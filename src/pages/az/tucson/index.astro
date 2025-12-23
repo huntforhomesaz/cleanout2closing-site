@@ -1,0 +1,29 @@
+---
+/**
+ * src/pages/az/tucson/index.astro
+ * Route: /az/tucson
+ * Content source: content/geo/az-tucson.md
+ * Layout: GeoServiceLayout (Tucson city hub)
+ * Task 7.2.3 - Content wiring complete
+ * 
+ * Note: az-tucson.md has page_type: "guide" instead of "geo_hub"
+ * This is a known mismatch documented per locked assumption #2.
+ */
+
+import { getEntry, render } from 'astro:content';
+import GeoServiceLayout from '../../../layouts/GeoServiceLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('geo', 'az-tucson');
+
+if (!entry) {
+  throw new Error('Content not found at content/geo/az-tucson.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<GeoServiceLayout frontmatter={frontmatter}>
+  <Content />
+</GeoServiceLayout>

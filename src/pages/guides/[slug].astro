@@ -1,0 +1,55 @@
+---
+/**
+ * src/pages/guides/[slug].astro
+ * Route: /guides/{slug}
+ * Content source: content/guides/*.md
+ * Layout: GuideLayout
+ * Task 7.2.3 - Content wiring complete
+ * 
+ * Dynamic route for individual guide pages using Astro Content Collections.
+ */
+
+import { getCollection, render } from 'astro:content';
+import GuideLayout from '../../layouts/GuideLayout.astro';
+
+// Generate static paths from all guides in the collection
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  
+  return guides.map((guide) => {
+    // Extract slug from the frontmatter slug field
+    // The slug field contains the full path like "/guides/inherited-house-tucson-what-to-do"
+    // We need just the last segment for the route parameter
+    const slugSegments = guide.data.slug.split('/');
+    const slugParam = slugSegments[slugSegments.length - 1];
+    
+    return {
+      params: { slug: slugParam },
+      props: { guide },
+    };
+  });
+}
+
+interface Props {
+  guide: {
+    data: {
+      title?: string;
+      description?: string;
+      canonical_url?: string;
+      faq_block?: any[];
+      geo?: { state?: string; city?: string };
+      date?: string;
+      updated?: string;
+    };
+    render: () => Promise<{ Content: any }>;
+  };
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+const frontmatter = guide.data;
+---
+
+<GuideLayout frontmatter={frontmatter}>
+  <Content />
+</GuideLayout>

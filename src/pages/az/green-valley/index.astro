@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/az/green-valley/index.astro
+ * Route: /az/green-valley
+ * Content source: content/geo/az-green-valley.md
+ * Layout: GeoServiceLayout (Green Valley hub)
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import GeoServiceLayout from '../../../layouts/GeoServiceLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('geo', 'az-green-valley');
+
+if (!entry) {
+  throw new Error('Content not found at content/geo/az-green-valley.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<GeoServiceLayout frontmatter={frontmatter}>
+  <Content />
+</GeoServiceLayout>

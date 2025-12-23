@@ -1,0 +1,81 @@
+---
+/**
+ * BaseLayout.astro
+ * Universal shell layout for all pages
+ * Provides: HTML structure, head, header/nav, footer, and content slot
+ * Task 7.2.4 - Now includes SEO meta tags and JSON-LD structured data
+ */
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Seo from '../components/Seo.astro';
+import JsonLd from '../components/JsonLd.astro';
+import Analytics from '../components/Analytics.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+  ogImage?: string;
+  ogType?: string;
+  schemas?: Record<string, unknown>[];
+}
+
+const {
+  title = 'Cleanout2Closing | From cleanout to closing in Tucson',
+  description = 'Realtor-led estate transition help in Tucson. From cleanout to closing, I coordinate vendors and the home sale so families can focus on what matters most.',
+  canonicalUrl = 'https://cleanout2closing.com',
+  noindex = false,
+  ogImage,
+  ogType,
+  schemas = [],
+} = Astro.props;
+
+// Get current path for nav highlighting
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <Seo 
+      title={title}
+      description={description}
+      canonicalUrl={canonicalUrl}
+      noindex={noindex}
+      ogImage={ogImage}
+      ogType={ogType}
+    />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/c2c/logo-cleanout2closing.svg" />
+    
+    <!-- JSON-LD Structured Data -->
+    {schemas.length > 0 && <JsonLd schemas={schemas} />}
+    
+    <!-- Google Analytics 4 -->
+    <Analytics />
+    
+    <!-- Slot for additional head content -->
+    <slot name="head" />
+  </head>
+  
+  <body>
+    <Header currentPath={currentPath} />
+    
+    <main id="main-content">
+      <slot />
+    </main>
+    
+    <Footer />
+    
+    <!-- Scripts slot for page-specific JS -->
+    <slot name="scripts" />
+  </body>
+</html>

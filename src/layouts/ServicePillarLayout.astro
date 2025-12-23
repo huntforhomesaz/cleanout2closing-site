@@ -1,0 +1,337 @@
+---
+/**
+ * ServicePillarLayout.astro
+ * Layout for service pillar pages
+ * Sections per Page_Templates.md:
+ * - Hero
+ * - "Is this you?" (bullets)
+ * - Common situations
+ * - How I help (process steps)
+ * - Boundaries (what I do / don't do)
+ * - What to expect
+ * - Proof
+ * - FAQs
+ * - CTA
+ * 
+ * Task 7.2.4 - JSON-LD schemas: WebPage, LocalBusiness, BreadcrumbList, FAQPage (conditional)
+ * Note: Also used by non-canonical page_types (about, persona, reviews, services)
+ * which only get BreadcrumbList per locked mapping table.
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import CTABlock from '../components/CTABlock.astro';
+import { generatePageSchemas } from '../lib/schema';
+
+interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    canonical_url?: string;
+    slug?: string;
+    page_type?: string;
+    faq_block?: any[];
+    noindex?: boolean;
+  };
+  Content?: any;
+}
+
+const { frontmatter = {}, Content } = Astro.props;
+
+// Generate JSON-LD schemas
+// page_type drives schema generation per locked mapping table
+const pageData = {
+  title: frontmatter.title || 'Service Page',
+  description: frontmatter.description || '',
+  canonical_url: frontmatter.canonical_url || '',
+  slug: frontmatter.slug || '',
+  page_type: frontmatter.page_type || 'service_pillar',
+  faq_block: frontmatter.faq_block,
+};
+
+const { schemas } = generatePageSchemas(pageData);
+---
+
+<BaseLayout 
+  title={frontmatter.title} 
+  description={frontmatter.description}
+  canonicalUrl={frontmatter.canonical_url}
+  noindex={frontmatter.noindex}
+  schemas={schemas}
+>
+  
+  <!-- Hero Section -->
+  <Hero 
+    variant="default"
+    eyebrow="Service"
+    title={frontmatter.title || 'Service Page'}
+  >
+    <p slot="content" class="hero-description">
+      {frontmatter.description}
+    </p>
+  </Hero>
+  
+  <!-- Main Content from Markdown -->
+  <article class="service-content">
+    <div class="container">
+      
+      <!-- Is This You? Section -->
+      <section class="is-this-you">
+        <h2>Is this what you are dealing with?</h2>
+        <div class="content-slot">
+          <!-- Content from markdown will populate via slot in Task 7.2.3 -->
+          <slot name="is-this-you">
+            <ul class="situation-bullets">
+              <li>A property that needs more than a simple listing</li>
+              <li>Vendors and cleanout work that needs coordination</li>
+              <li>Family members or professionals who need to stay informed</li>
+              <li>A timeline that involves legal or family milestones</li>
+            </ul>
+          </slot>
+        </div>
+      </section>
+      
+      <!-- Common Situations Section -->
+      <section class="common-situations">
+        <h2>Situations I handle all the time</h2>
+        <div class="content-slot">
+          <slot name="common-situations">
+            <div class="situations-grid">
+              <div class="situation-item">
+                <h3>Probate property</h3>
+                <p>Managing cleanout and sale while court requirements unfold.</p>
+              </div>
+              <div class="situation-item">
+                <h3>Trust sale</h3>
+                <p>Coordinating with trustees who need documentation.</p>
+              </div>
+              <div class="situation-item">
+                <h3>Inherited property</h3>
+                <p>Helping heirs figure out next steps from scratch.</p>
+              </div>
+            </div>
+          </slot>
+        </div>
+      </section>
+      
+      <!-- How I Help Section -->
+      <section class="how-i-help">
+        <h2>How I take this off your plate</h2>
+        <div class="content-slot">
+          <slot name="process">
+            <ProcessSteps 
+              heading=""
+              steps={[
+                { title: 'Understand your legal and family timelines', description: 'I learn what deadlines or milestones you are working around.' },
+                { title: 'Coordinate cleanout and vendor work', description: 'I line up estimates, schedule work, and keep everything moving.' },
+                { title: 'Price, list, and negotiate the sale', description: 'I handle the real estate side with a clear pricing strategy.' },
+                { title: 'Keep you and your professionals updated', description: 'You get simple status updates through escrow.' },
+              ]}
+              variant="numbered"
+            />
+          </slot>
+        </div>
+      </section>
+      
+      <!-- Boundaries Section -->
+      <section class="boundaries">
+        <h2>What I do and what I do not do</h2>
+        <div class="boundaries-grid">
+          <div class="boundary-column">
+            <h3>What I handle</h3>
+            <slot name="what-i-do">
+              <ul>
+                <li>Coordinate cleanout, vendors, and property prep</li>
+                <li>Oversee the work and keep you updated</li>
+                <li>Price, list, and negotiate the home sale</li>
+                <li>Provide clear documentation for trustees and fiduciaries</li>
+              </ul>
+            </slot>
+          </div>
+          <div class="boundary-column">
+            <h3>What stays with you or your professionals</h3>
+            <slot name="what-i-dont-do">
+              <ul>
+                <li>Legal and tax decisions</li>
+                <li>Probate filings and court paperwork</li>
+                <li>Acting as executor, trustee, or fiduciary</li>
+                <li>Daily caregiving or medical decisions</li>
+              </ul>
+            </slot>
+          </div>
+        </div>
+        <p class="disclaimer-text">
+          I am not an attorney, accountant, or tax professional. I do not provide legal or tax advice. 
+          My role is to coordinate the property, vendors, and sale alongside your attorney or fiduciary.
+        </p>
+      </section>
+      
+      <!-- What to Expect Section -->
+      <section class="what-to-expect">
+        <h2>What you can expect when we work together</h2>
+        <slot name="expectations">
+          <ul class="expectations-list">
+            <li><strong>Clear communication:</strong> You will know what is happening and what comes next.</li>
+            <li><strong>Organized documentation:</strong> Estimates, invoices, and updates are easy to share with your attorney or fiduciary.</li>
+            <li><strong>Realistic timelines:</strong> I set expectations based on Tucson market conditions and your situation.</li>
+            <li><strong>No surprises:</strong> I do not start work without your approval, and I keep you in the loop.</li>
+          </ul>
+        </slot>
+      </section>
+      
+      <!-- Body Content from Markdown -->
+      <section class="markdown-content">
+        <slot />
+      </section>
+      
+    </div>
+  </article>
+  
+  <!-- Proof Section -->
+  <section class="proof-section">
+    <div class="container">
+      <h2>How this has worked for other families</h2>
+      <div class="proof-placeholder">
+        <slot name="proof">
+          <p><em>Case examples and testimonials will be displayed here.</em></p>
+        </slot>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQs Section -->
+  <FAQAccordion 
+    heading="Common questions about this service"
+    faqs={frontmatter.faq_block || []}
+  />
+  
+  <!-- Final CTA -->
+  <CTABlock 
+    heading="Does this sound like your situation?"
+    text="If this is what you are dealing with, tell me what is going on and I will map out options that fit your timelines and comfort level."
+    ctaLabel="Talk through my situation"
+    ctaHref="/contact"
+  />
+  
+</BaseLayout>
+
+<style>
+  .service-content {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .service-content section {
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .service-content h2 {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Is This You */
+  .situation-bullets {
+    max-width: 600px;
+  }
+  
+  .situation-bullets li {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.05rem;
+  }
+  
+  /* Common Situations Grid */
+  .situations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .situation-item {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-warm);
+    border-radius: 8px;
+  }
+  
+  .situation-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-teal-deep);
+  }
+  
+  .situation-item p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  /* Boundaries */
+  .boundaries {
+    background-color: var(--color-bg-warm);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+  }
+  
+  .boundaries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .boundary-column h3 {
+    font-size: 1.1rem;
+    color: var(--color-teal-deep);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .boundary-column ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  
+  .disclaimer-text {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    opacity: 0.85;
+    border-top: 1px solid #e5e5e5;
+    padding-top: var(--spacing-md);
+    margin: 0;
+  }
+  
+  /* What to Expect */
+  .expectations-list {
+    max-width: 700px;
+  }
+  
+  .expectations-list li {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  /* Proof Section */
+  .proof-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-warm);
+    text-align: center;
+  }
+  
+  .proof-placeholder {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-white);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: var(--spacing-md) auto 0;
+  }
+  
+  /* Markdown Content */
+  .markdown-content {
+    border-top: 1px solid #e5e5e5;
+    padding-top: var(--spacing-lg);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .boundaries-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

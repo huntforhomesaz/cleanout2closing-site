@@ -1,0 +1,105 @@
+---
+/**
+ * src/pages/guides/index.astro
+ * Route: /guides
+ * This is the guides index/hub page - lists all guides from content/guides/
+ * Layout: GuideLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getCollection } from 'astro:content';
+import GuideLayout from '../../layouts/GuideLayout.astro';
+
+// Load all guides from collection
+const allGuides = await getCollection('guides');
+
+// Sort by date descending (most recent first)
+const sortedGuides = allGuides.sort((a, b) => {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const frontmatter = {
+  title: 'Guides | Cleanout2Closing',
+  description: 'Practical guides for estate transitions, inherited properties, and senior moves in Tucson.',
+  canonical_url: 'https://cleanout2closing.com/guides',
+};
+---
+
+<GuideLayout frontmatter={frontmatter}>
+  <h1>Guides and Resources</h1>
+  <p class="intro">Practical, plain-English guides to help you navigate estate transitions, inherited properties, and senior moves in Tucson and Southern Arizona.</p>
+  
+  <div class="guides-list">
+    {sortedGuides.map((guide) => (
+      <article class="guide-card">
+        <h2>
+          <a href={guide.data.slug}>{guide.data.title}</a>
+        </h2>
+        <p>{guide.data.description}</p>
+        <p class="guide-meta">
+          {guide.data.tags && guide.data.tags.length > 0 && (
+            <span class="tags">
+              {guide.data.tags.slice(0, 3).map((tag: string) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </span>
+          )}
+        </p>
+      </article>
+    ))}
+  </div>
+</GuideLayout>
+
+<style>
+  .intro {
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin-bottom: var(--spacing-lg, 2rem);
+  }
+  
+  .guides-list {
+    display: grid;
+    gap: var(--spacing-lg, 2rem);
+    max-width: 800px;
+  }
+  
+  .guide-card {
+    padding: var(--spacing-md, 1.5rem);
+    background: var(--color-bg-white, #fff);
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+  }
+  
+  .guide-card h2 {
+    margin-bottom: var(--spacing-xs, 0.5rem);
+  }
+  
+  .guide-card h2 a {
+    color: var(--color-teal, #2D7E7F);
+    text-decoration: none;
+  }
+  
+  .guide-card h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  .guide-meta {
+    margin-top: var(--spacing-sm, 1rem);
+    font-size: 0.875rem;
+    color: var(--color-gray-dark, #4A4746);
+  }
+  
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    background: var(--color-bg-warm, #f5f5f0);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+</style>

@@ -1,0 +1,128 @@
+---
+/**
+ * FAQAccordion.astro
+ * FAQ accordion component shell
+ * Ready for FAQPage schema in Task 7.2.4
+ * Actual FAQ data will be wired from frontmatter in Task 7.2.3
+ */
+
+interface FAQItem {
+  question: string;
+  answer: string;
+  audience?: string;
+  schema?: boolean;
+}
+
+interface Props {
+  heading?: string;
+  faqs?: FAQItem[];
+}
+
+const {
+  heading = 'Common questions',
+  faqs = [],
+} = Astro.props;
+---
+
+<section class="faq-section">
+  <div class="faq-container">
+    <h2 class="faq-heading">{heading}</h2>
+    
+    {faqs.length > 0 ? (
+      <div class="faq-list">
+        {faqs.map((faq, index) => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              {faq.question}
+            </summary>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    ) : (
+      <div class="faq-list">
+        <slot />
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-white);
+  }
+  
+  .faq-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+  
+  .faq-heading {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .faq-item:first-child {
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .faq-question {
+    display: block;
+    padding: var(--spacing-md) 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--color-gray-dark);
+    list-style: none;
+    position: relative;
+    padding-right: var(--spacing-lg);
+  }
+  
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+  
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--color-teal-deep);
+    transition: transform 0.2s ease;
+  }
+  
+  .faq-item[open] .faq-question::after {
+    content: '−';
+  }
+  
+  .faq-question:hover {
+    color: var(--color-teal-deep);
+  }
+  
+  .faq-answer {
+    padding-bottom: var(--spacing-md);
+    padding-right: var(--spacing-lg);
+  }
+  
+  .faq-answer p {
+    margin: 0;
+    color: var(--color-gray-dark);
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+</style>

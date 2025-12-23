@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/index.astro
+ * Route: /
+ * Content source: content/pages/home.md
+ * Layout: HomeLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import HomeLayout from '../layouts/HomeLayout.astro';
+
+// Load home page content from collection
+const homeEntry = await getEntry('pages', 'home');
+
+if (!homeEntry) {
+  throw new Error('Home page content not found at content/pages/home.md');
+}
+
+const { Content } = await render(homeEntry);
+const frontmatter = homeEntry.data;
+---
+
+<HomeLayout frontmatter={frontmatter}>
+  <Content />
+</HomeLayout>

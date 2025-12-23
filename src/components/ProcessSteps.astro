@@ -1,0 +1,194 @@
+---
+/**
+ * ProcessSteps.astro
+ * Step-by-step process component
+ * Used for "How it works" and similar sections
+ * Ready for HowTo schema in Task 7.2.4
+ */
+
+interface Step {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  heading?: string;
+  steps?: Step[];
+  variant?: 'numbered' | 'horizontal' | 'vertical';
+}
+
+const {
+  heading = 'How it works',
+  steps = [],
+  variant = 'numbered',
+} = Astro.props;
+---
+
+<section class:list={['process-section', `process--${variant}`]}>
+  <div class="process-container">
+    {heading && <h2 class="process-heading">{heading}</h2>}
+    
+    {steps.length > 0 ? (
+      <ol class="process-list">
+        {steps.map((step, index) => (
+          <li class="process-step">
+            <span class="step-number">{index + 1}</span>
+            <div class="step-content">
+              <h3 class="step-title">{step.title}</h3>
+              <p class="step-description">{step.description}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <ol class="process-list">
+        <slot />
+      </ol>
+    )}
+  </div>
+</section>
+
+<style>
+  .process-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-warm);
+  }
+  
+  .process-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+  
+  .process-heading {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .process-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Numbered variant (default) */
+  .process--numbered .process-step {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    align-items: flex-start;
+  }
+  
+  .process--numbered .step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-teal-deep);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .process--numbered .step-content {
+    flex: 1;
+    padding-top: 0.25rem;
+  }
+  
+  .step-title {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-gray-dark);
+  }
+  
+  .step-description {
+    margin: 0;
+    color: var(--color-gray-dark);
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+  
+  /* Horizontal variant - for home page */
+  .process--horizontal .process-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 100%;
+  }
+  
+  .process--horizontal .process-step {
+    text-align: center;
+    padding: var(--spacing-md);
+  }
+  
+  .process--horizontal .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--spacing-sm);
+    background-color: var(--color-teal-deep);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .process--horizontal .step-content {
+    padding: 0;
+  }
+  
+  /* Vertical variant - compact */
+  .process--vertical .process-step {
+    position: relative;
+    padding-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-left: 2px solid var(--color-teal-deep);
+  }
+  
+  .process--vertical .process-step:last-child {
+    border-left: 2px solid transparent;
+  }
+  
+  .process--vertical .step-number {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-teal-deep);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.85rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .process--horizontal .process-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .process--horizontal .process-step {
+      text-align: left;
+      display: flex;
+      gap: var(--spacing-md);
+      align-items: flex-start;
+    }
+    
+    .process--horizontal .step-number {
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+</style>

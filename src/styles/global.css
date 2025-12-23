@@ -1,0 +1,193 @@
+/* 
+ * Cleanout2Closing Global Styles
+ * Based on Brand_Guardrails.md
+ */
+
+/* CSS Custom Properties - Brand Colors */
+:root {
+  /* Primary Colors */
+  --color-teal-light: #3DB5B6;    /* Use on dark backgrounds */
+  --color-teal-deep: #2D7E7F;     /* Use on light backgrounds */
+  --color-orange: #EE6921;        /* Action / Transition */
+  --color-gray-dark: #4A4746;     /* Structure / Text */
+  
+  /* Background Colors */
+  --color-bg-warm: #F4F5F3;       /* Preferred background */
+  --color-bg-white: #FFFFFF;
+  --color-bg-navy: #1a2744;
+  
+  /* Typography */
+  --font-primary: Georgia, 'Palatino Linotype', Palatino, 'Book Antiqua', serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  /* Container */
+  --container-max: 1200px;
+  --container-padding: 1.5rem;
+}
+
+/* Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  background-color: var(--color-bg-warm);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: normal;
+  line-height: 1.3;
+  margin-top: 0;
+  color: var(--color-gray-dark);
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-teal-deep);
+}
+
+h3 {
+  font-size: 1.375rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+h4 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: var(--color-teal-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--color-orange);
+}
+
+/* Container utility */
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Section spacing */
+section {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-orange);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #d55a18;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-teal-deep);
+  border: 2px solid var(--color-teal-deep);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-teal-deep);
+  color: white;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-teal {
+  color: var(--color-teal-deep);
+}
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+.bg-white {
+  background-color: var(--color-bg-white);
+}
+
+.bg-warm {
+  background-color: var(--color-bg-warm);
+}
+
+/* Visually hidden (for accessibility) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,268 @@
+---
+/**
+ * Footer.astro
+ * Site footer with contact info, disclaimers, and legal text
+ * Includes brokerage disclosure as required by Brand_Guardrails.md
+ */
+---
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Footer Main Content -->
+    <div class="footer-content">
+      
+      <!-- Brand Column -->
+      <div class="footer-column footer-brand">
+        <img 
+          src="/images/c2c/logo-cleanout2closing.svg" 
+          alt="Cleanout2Closing" 
+          class="footer-logo"
+          width="180"
+          height="45"
+        />
+        <p class="footer-tagline">
+          From cleanout to closing in Tucson, handled for you.
+        </p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/how-it-works">How It Works</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/service-areas">Service Areas</a></li>
+          <li><a href="/guides">Guides</a></li>
+          <li><a href="/faqs">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <!-- Services -->
+      <div class="footer-column">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="/services/inherited-and-probate-property">Inherited &amp; Probate</a></li>
+          <li><a href="/services/senior-transitions">Senior Transitions</a></li>
+          <li><a href="/services/trustee-support">Trustee Support</a></li>
+          <li><a href="/services/out-of-state-owners">Out-of-State Owners</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div class="footer-column">
+        <h4 class="footer-heading">Contact</h4>
+        <p class="footer-contact">
+          Bradley Hunt<br />
+          Tucson, Arizona
+        </p>
+        <a href="/contact" class="btn btn-secondary footer-cta">
+          Schedule a Call
+        </a>
+      </div>
+      
+    </div>
+    
+    <!-- Brokerage Disclosure -->
+    <div class="footer-brokerage">
+      <div class="brokerage-logos">
+        <img 
+          src="/images/c2c/stratton-group-logo.png" 
+          alt="The Stratton Group" 
+          class="brokerage-logo"
+          width="100"
+          height="40"
+        />
+        <img 
+          src="/images/c2c/keller-williams-logo.png" 
+          alt="Keller Williams Integrity First Realty" 
+          class="brokerage-logo"
+          width="100"
+          height="40"
+        />
+      </div>
+      <p class="brokerage-text">
+        Bradley Hunt is a licensed Realtor in the state of Arizona, member of The Stratton Group at Keller Williams Integrity First Realty.
+      </p>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p class="disclaimer">
+          Cleanout2Closing coordinates property transitions and real estate sales. 
+          I do not provide legal, tax, or accounting advice. 
+          I do not act as an executor, fiduciary, or attorney. 
+          Your attorney or fiduciary handles legal and fiduciary matters.
+        </p>
+        <p class="copyright">
+          &copy; {new Date().getFullYear()} Cleanout2Closing. All rights reserved.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-gray-dark);
+    color: white;
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+  }
+  
+  .footer-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .footer-brand {
+    grid-column: span 1;
+  }
+  
+  .footer-logo {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    filter: brightness(0) invert(1);
+  }
+  
+  .footer-tagline {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+  
+  .footer-heading {
+    color: var(--color-teal-light);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+    color: var(--color-teal-light);
+  }
+  
+  .footer-contact {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-cta {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-color: white;
+    color: white;
+  }
+  
+  .footer-cta:hover {
+    background-color: white;
+    color: var(--color-gray-dark);
+  }
+  
+  /* Brokerage Section */
+  .footer-brokerage {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .brokerage-logos {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-shrink: 0;
+  }
+  
+  .brokerage-logo {
+    height: 40px;
+    width: auto;
+    opacity: 0.9;
+  }
+  
+  .brokerage-text {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    padding-top: var(--spacing-lg);
+  }
+  
+  .footer-legal {
+    text-align: center;
+  }
+  
+  .disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-sm);
+    line-height: 1.5;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin: 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-brand {
+      grid-column: span 2;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-brand {
+      grid-column: span 1;
+    }
+    
+    .footer-brokerage {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/services.astro
+ * Route: /services
+ * Content source: content/pages/services.md
+ * Layout: ServicePillarLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import ServicePillarLayout from '../layouts/ServicePillarLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'services');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/services.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<ServicePillarLayout frontmatter={frontmatter}>
+  <Content />
+</ServicePillarLayout>

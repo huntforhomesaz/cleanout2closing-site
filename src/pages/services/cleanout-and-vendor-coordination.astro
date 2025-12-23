@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/services/cleanout-and-vendor-coordination.astro
+ * Route: /services/cleanout-and-vendor-coordination
+ * Content source: content/pages/service-cleanout-and-vendor-coordination.md
+ * Layout: ServicePillarLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import ServicePillarLayout from '../../layouts/ServicePillarLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'service-cleanout-and-vendor-coordination');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/service-cleanout-and-vendor-coordination.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<ServicePillarLayout frontmatter={frontmatter}>
+  <Content />
+</ServicePillarLayout>

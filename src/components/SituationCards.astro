@@ -1,0 +1,147 @@
+---
+/**
+ * SituationCards.astro
+ * "What situation are you in?" cards component
+ * Used primarily on the home page
+ * Links to relevant service/persona pages
+ */
+
+interface SituationCard {
+  title: string;
+  description: string;
+  href: string;
+}
+
+interface Props {
+  heading?: string;
+  situations?: SituationCard[];
+}
+
+const {
+  heading = 'What situation are you in?',
+  situations = [
+    {
+      title: 'Probate property',
+      description: 'Navigating court requirements while managing the house.',
+      href: '/services/inherited-and-probate-property',
+    },
+    {
+      title: 'Trust sale',
+      description: 'Trustees with responsibilities and documentation needs.',
+      href: '/services/trustee-support',
+    },
+    {
+      title: 'Inherited property',
+      description: 'You inherited a Tucson home and need to figure out next steps.',
+      href: '/for-heirs-and-personal-representatives',
+    },
+    {
+      title: 'Senior transition',
+      description: 'A parent is moving to assisted living or downsizing.',
+      href: '/services/senior-transitions',
+    },
+    {
+      title: 'Multiple decision-makers',
+      description: 'Family members with different opinions about the property.',
+      href: '/services/inherited-and-probate-property',
+    },
+    {
+      title: 'Out-of-state owner',
+      description: 'Managing a Tucson property from across the country.',
+      href: '/services/out-of-state-owners',
+    },
+  ],
+} = Astro.props;
+---
+
+<section class="situations-section">
+  <div class="situations-container">
+    <h2 class="situations-heading">{heading}</h2>
+    
+    <div class="situations-grid">
+      {situations.map((situation) => (
+        <a href={situation.href} class="situation-card">
+          <h3 class="situation-title">{situation.title}</h3>
+          <p class="situation-description">{situation.description}</p>
+          <span class="situation-link">Learn more →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .situations-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-white);
+  }
+  
+  .situations-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+  
+  .situations-heading {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .situations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  .situation-card {
+    display: block;
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-warm);
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .situation-card:hover {
+    border-color: var(--color-teal-deep);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .situation-title {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-gray-dark);
+  }
+  
+  .situation-description {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+    opacity: 0.85;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+  }
+  
+  .situation-link {
+    font-size: 0.9rem;
+    color: var(--color-teal-deep);
+    font-weight: 500;
+  }
+  
+  .situation-card:hover .situation-link {
+    color: var(--color-orange);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .situations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .situations-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

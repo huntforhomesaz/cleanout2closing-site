@@ -1,0 +1,119 @@
+---
+/**
+ * Header.astro
+ * Site header with logo and navigation
+ * Uses Nav component for menu items
+ */
+import Nav from './Nav.astro';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="logo-link" aria-label="Cleanout2Closing Home">
+      <img 
+        src="/images/c2c/logo-cleanout2closing.svg" 
+        alt="Cleanout2Closing" 
+        class="logo"
+        width="240"
+        height="60"
+      />
+    </a>
+    
+    <Nav currentPath={currentPath} />
+    
+    <a href="/contact" class="header-cta btn btn-primary">
+      Free Strategy Call
+    </a>
+    
+    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-bg-white);
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--container-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+  }
+  
+  .logo-link {
+    display: block;
+    flex-shrink: 0;
+  }
+  
+  .logo {
+    display: block;
+    height: 50px;
+    width: auto;
+  }
+  
+  .header-cta {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    padding: 0.625rem 1.25rem;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+  }
+  
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-gray-dark);
+    position: relative;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-gray-dark);
+  }
+  
+  .hamburger::before {
+    top: -7px;
+  }
+  
+  .hamburger::after {
+    top: 7px;
+  }
+  
+  @media (max-width: 900px) {
+    .header-cta {
+      display: none;
+    }
+    
+    .mobile-menu-toggle {
+      display: block;
+    }
+  }
+</style>

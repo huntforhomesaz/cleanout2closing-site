@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/for-seniors-and-their-families.astro
+ * Route: /for-seniors-and-their-families
+ * Content source: content/pages/for-seniors-and-their-families.md
+ * Layout: ServicePillarLayout (persona pages use service pillar layout)
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import ServicePillarLayout from '../layouts/ServicePillarLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'for-seniors-and-their-families');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/for-seniors-and-their-families.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<ServicePillarLayout frontmatter={frontmatter}>
+  <Content />
+</ServicePillarLayout>

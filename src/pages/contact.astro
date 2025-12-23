@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/contact.astro
+ * Route: /contact
+ * Content source: content/pages/contact.md
+ * Layout: ContactLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import ContactLayout from '../layouts/ContactLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'contact');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/contact.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<ContactLayout frontmatter={frontmatter}>
+  <Content />
+</ContactLayout>

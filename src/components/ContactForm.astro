@@ -1,0 +1,485 @@
+---
+/**
+ * ContactForm.astro
+ * Canonical contact form component for Cleanout2Closing
+ * Used on /contact and optionally inline on guides/service pages
+ * 
+ * Task 7.2.5 - Forms, CTAs, and Lead Flow
+ * 
+ * Features:
+ * - Netlify Forms integration with honeypot spam protection
+ * - Hidden fields for tracking (page context, UTM params, geo)
+ * - Accessible form with proper labels and validation
+ * - Success/error state handling via client-side JS
+ */
+
+interface Props {
+  variant?: 'full' | 'compact';
+  pageUrl?: string;
+  pageType?: string;
+  pageTitle?: string;
+  template?: string;
+  geoCity?: string;
+  geoState?: string;
+  formVariant?: string;
+  showTimeline?: boolean;
+  showHowHeard?: boolean;
+}
+
+const {
+  variant = 'full',
+  pageUrl = '',
+  pageType = '',
+  pageTitle = '',
+  template = '',
+  geoCity = '',
+  geoState = '',
+  formVariant = 'contact_main',
+  showTimeline = true,
+  showHowHeard = true,
+} = Astro.props;
+---
+
+<div class="contact-form-wrapper" data-form-wrapper>
+  <!-- Form State: Default -->
+  <form 
+    class="contact-form" 
+    name="c2c-contact" 
+    method="POST" 
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    data-contact-form
+  >
+    <!-- Hidden field for Netlify form name -->
+    <input type="hidden" name="form-name" value="c2c-contact" />
+    
+    <!-- Hidden tracking fields -->
+    <input type="hidden" name="page_url" value={pageUrl} data-page-url />
+    <input type="hidden" name="page_type" value={pageType} />
+    <input type="hidden" name="page_title" value={pageTitle} />
+    <input type="hidden" name="template" value={template} />
+    <input type="hidden" name="geo_city" value={geoCity} />
+    <input type="hidden" name="geo_state" value={geoState} />
+    <input type="hidden" name="form_variant" value={formVariant} />
+    
+    <!-- UTM fields (populated via JS) -->
+    <input type="hidden" name="utm_source" value="" data-utm="source" />
+    <input type="hidden" name="utm_medium" value="" data-utm="medium" />
+    <input type="hidden" name="utm_campaign" value="" data-utm="campaign" />
+    <input type="hidden" name="utm_term" value="" data-utm="term" />
+    <input type="hidden" name="utm_content" value="" data-utm="content" />
+    
+    <!-- Honeypot field (hidden from humans, catches bots) -->
+    <p class="form-honeypot">
+      <label>
+        Do not fill this out if you are human:
+        <input name="bot-field" tabindex="-1" autocomplete="off" />
+      </label>
+    </p>
+    
+    <!-- Name Field -->
+    <div class="form-group">
+      <label for="full_name">Your name <span class="required">*</span></label>
+      <input 
+        type="text" 
+        id="full_name" 
+        name="full_name" 
+        required 
+        autocomplete="name"
+        placeholder="Full name"
+      />
+    </div>
+    
+    <!-- Best Contact Method -->
+    <fieldset class="form-group form-group--radio">
+      <legend>Best way to reach you <span class="required">*</span></legend>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="best_contact_method" value="Phone" required />
+          <span>Phone</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="best_contact_method" value="Email" />
+          <span>Email</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="best_contact_method" value="Either" />
+          <span>Either</span>
+        </label>
+      </div>
+    </fieldset>
+    
+    <!-- Email Field -->
+    <div class="form-group">
+      <label for="email">Email address <span class="required">*</span></label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        autocomplete="email"
+        placeholder="your@email.com"
+      />
+    </div>
+    
+    <!-- Phone Field -->
+    <div class="form-group">
+      <label for="phone">Phone number <span class="required">*</span></label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        required
+        autocomplete="tel"
+        placeholder="(520) 555-1234"
+      />
+    </div>
+    
+    <!-- Situation Type -->
+    <div class="form-group">
+      <label for="situation_type">What describes your situation? <span class="required">*</span></label>
+      <select id="situation_type" name="situation_type" required>
+        <option value="">Select one...</option>
+        <option value="Probate property">Probate property</option>
+        <option value="Trust sale">Trust sale</option>
+        <option value="Inherited property">Inherited property</option>
+        <option value="Senior transition">Senior transition or assisted living</option>
+        <option value="Multiple decision-makers">Family property with multiple decision-makers</option>
+        <option value="Out-of-state owner">Out-of-state owner</option>
+        <option value="Other">Other or not sure</option>
+      </select>
+    </div>
+    
+    <!-- Property Location -->
+    <div class="form-group">
+      <label for="property_location">Property location <span class="required">*</span></label>
+      <input 
+        type="text" 
+        id="property_location" 
+        name="property_location" 
+        required
+        placeholder="City, neighborhood, or address"
+      />
+      <span class="form-helper">City or neighborhood is fine if you prefer not to share the full address.</span>
+    </div>
+    
+    <!-- Situation Description -->
+    <div class="form-group">
+      <label for="situation_description">Tell me briefly about your situation <span class="required">*</span></label>
+      <textarea 
+        id="situation_description" 
+        name="situation_description" 
+        rows="4" 
+        required
+        placeholder="Share a few basics about the property and what is going on."
+      ></textarea>
+    </div>
+    
+    {variant === 'full' && showTimeline && (
+      <div class="form-group">
+        <label for="timeline">What is your timeline?</label>
+        <select id="timeline" name="timeline">
+          <option value="">Select one (optional)...</option>
+          <option value="As soon as possible">As soon as possible</option>
+          <option value="Next 1-3 months">Next 1 to 3 months</option>
+          <option value="3+ months">3 or more months</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </div>
+    )}
+    
+    {variant === 'full' && showHowHeard && (
+      <div class="form-group">
+        <label for="how_did_you_hear">How did you hear about me?</label>
+        <input 
+          type="text" 
+          id="how_did_you_hear" 
+          name="how_did_you_hear" 
+          placeholder="Referral, Google search, etc. (optional)"
+        />
+      </div>
+    )}
+    
+    <!-- Submit Button -->
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Send my situation</button>
+    </div>
+    
+    <!-- Form Error Message (hidden by default) -->
+    <div class="form-error" data-form-error hidden>
+      <p>
+        Something went wrong while sending your message.<br />
+        Please try again in a moment, or email me directly at 
+        <a href="mailto:bradley@cleanout2closing.com">bradley@cleanout2closing.com</a> 
+        and I will respond as soon as I can.
+      </p>
+    </div>
+  </form>
+  
+  <!-- Success State (hidden by default) -->
+  <div class="form-success" data-form-success hidden>
+    <div class="success-content">
+      <h3>Thank you for reaching out.</h3>
+      <p>I usually respond within one business day.</p>
+      <p>
+        I will review what you shared and let you know if I am the right fit. 
+        If it makes sense to move forward, we will schedule a time to walk the property 
+        or talk through your options in more detail.
+      </p>
+      <p class="success-note">
+        If your timeline is very tight or the situation is urgent, you can also email me directly at 
+        <a href="mailto:bradley@cleanout2closing.com">bradley@cleanout2closing.com</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  /* Honeypot - hidden from users */
+  .form-honeypot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .form-group label,
+  .form-group legend {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+    font-weight: normal;
+  }
+  
+  .form-group legend {
+    padding: 0;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .required {
+    color: var(--color-orange);
+  }
+  
+  /* Input Styles */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group select,
+  .form-group textarea {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    background-color: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-teal-deep);
+    box-shadow: 0 0 0 2px rgba(45, 126, 127, 0.15);
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #999;
+  }
+  
+  /* Radio Group */
+  .form-group--radio {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+  
+  .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  
+  .radio-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-teal-deep);
+  }
+  
+  /* Helper Text */
+  .form-helper {
+    font-size: 0.85rem;
+    color: var(--color-gray-dark);
+    opacity: 0.75;
+  }
+  
+  /* Form Actions */
+  .form-actions {
+    margin-top: var(--spacing-sm);
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+  
+  @media (min-width: 500px) {
+    .form-actions .btn {
+      width: auto;
+      min-width: 200px;
+    }
+  }
+  
+  /* Error State */
+  .form-error {
+    padding: var(--spacing-md);
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 4px;
+    color: #991b1b;
+  }
+  
+  .form-error p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  .form-error a {
+    color: #991b1b;
+  }
+  
+  /* Success State */
+  .form-success {
+    padding: var(--spacing-lg);
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+  }
+  
+  .success-content h3 {
+    color: var(--color-teal-deep);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+  }
+  
+  .success-content p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-gray-dark);
+  }
+  
+  .success-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .success-note {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid #bbf7d0;
+  }
+  
+  /* Validation Styles */
+  .form-group input:invalid:not(:placeholder-shown),
+  .form-group select:invalid:not([value=""]),
+  .form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #f59e0b;
+  }
+</style>
+
+<script>
+  // Form handling script
+  document.addEventListener('DOMContentLoaded', () => {
+    const formWrappers = document.querySelectorAll('[data-form-wrapper]');
+    
+    formWrappers.forEach((wrapper) => {
+      const form = wrapper.querySelector('[data-contact-form]');
+      const errorEl = wrapper.querySelector('[data-form-error]');
+      const successEl = wrapper.querySelector('[data-form-success]');
+      
+      if (!form) return;
+      
+      // Populate page URL
+      const pageUrlInput = form.querySelector('[data-page-url]');
+      if (pageUrlInput) {
+        pageUrlInput.value = window.location.href;
+      }
+      
+      // Populate UTM parameters from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmFields = ['source', 'medium', 'campaign', 'term', 'content'];
+      
+      utmFields.forEach((field) => {
+        const input = form.querySelector(`[data-utm="${field}"]`);
+        const value = urlParams.get(`utm_${field}`);
+        if (input && value) {
+          input.value = value;
+        }
+      });
+      
+      // Handle form submission
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Hide any previous error
+        if (errorEl) errorEl.hidden = true;
+        
+        const formData = new FormData(form);
+        
+        try {
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString(),
+          });
+          
+          if (response.ok) {
+            // Show success state
+            form.hidden = true;
+            if (successEl) successEl.hidden = false;
+            
+            // Track successful form submission with GA4
+            if (typeof window.gtag === 'function') {
+              const formName = form.getAttribute('name') || 'c2c-contact';
+              const pageType = form.querySelector('[name="page_type"]')?.value || 'unknown';
+              window.gtag('event', 'contact_form_submit', {
+                form_name: formName,
+                page_type: pageType,
+                page_path: window.location.pathname,
+              });
+            }
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          console.error('Form error:', error);
+          if (errorEl) errorEl.hidden = false;
+        }
+      });
+    });
+  });
+</script>

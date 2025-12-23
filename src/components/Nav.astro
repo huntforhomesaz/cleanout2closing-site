@@ -1,0 +1,116 @@
+---
+/**
+ * Nav.astro
+ * Navigation menu component
+ * Links match IA_Map.md structure
+ */
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/how-it-works', label: 'How It Works' },
+  { href: '/services', label: 'Services' },
+  { href: '/service-areas', label: 'Service Areas' },
+  { href: '/faqs', label: 'FAQs' },
+  { href: '/about', label: 'About' },
+  { href: '/reviews', label: 'Reviews' },
+  { href: '/contact', label: 'Contact' },
+];
+
+function isActive(href: string, currentPath: string): boolean {
+  if (href === '/') {
+    return currentPath === '/' || currentPath === '';
+  }
+  return currentPath.startsWith(href);
+}
+---
+
+<nav class="main-nav" aria-label="Main navigation">
+  <ul class="nav-list">
+    {navItems.map((item) => (
+      <li class="nav-item">
+        <a 
+          href={item.href} 
+          class:list={['nav-link', { active: isActive(item.href, currentPath) }]}
+          aria-current={isActive(item.href, currentPath) ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 0;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--color-gray-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--color-teal-deep);
+  }
+  
+  .nav-link.active {
+    color: var(--color-teal-deep);
+    font-weight: 600;
+  }
+  
+  @media (max-width: 900px) {
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-bg-white);
+      border-bottom: 1px solid #e5e5e5;
+      padding: var(--spacing-md);
+    }
+    
+    .main-nav.is-open {
+      display: block;
+    }
+    
+    .nav-list {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .nav-link {
+      padding: var(--spacing-sm);
+      border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .nav-item:last-child .nav-link {
+      border-bottom: none;
+    }
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+/**
+ * src/components/Seo.astro
+ * SEO meta tags component
+ * Task 7.2.4 - JSON-LD and SEO wiring
+ * 
+ * Handles:
+ * - <title> tag
+ * - <meta name="description">
+ * - <link rel="canonical">
+ * - <meta name="robots"> (noindex handling)
+ * - Open Graph tags
+ * - Twitter card tags
+ */
+
+import { SITE_CONFIG } from '../config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  noindex?: boolean;
+  ogImage?: string;
+  ogType?: string;
+}
+
+const { 
+  title, 
+  description, 
+  canonicalUrl, 
+  noindex = false,
+  ogImage = SITE_CONFIG.business.image,
+  ogType = 'website',
+} = Astro.props;
+
+// Build full title with suffix if not already present
+const fullTitle = title.includes(SITE_CONFIG.name) 
+  ? title 
+  : `${title}${SITE_CONFIG.titleSuffix}`;
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Robots -->
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow" />
+)}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content={SITE_CONFIG.name} />
+<meta property="og:locale" content={SITE_CONFIG.language.replace('-', '_')} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />

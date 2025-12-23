@@ -1,0 +1,336 @@
+---
+/**
+ * GeoServiceLayout.astro
+ * Layout for GEO service pages (city-specific pages)
+ * Used by: Tucson hub, Green Valley hub, and their service pages
+ * Sections per Page_Templates.md:
+ * - GEO-specific hero
+ * - Local context
+ * - How I help here
+ * - Boundaries
+ * - Local FAQs
+ * - Related links
+ * - CTA
+ * 
+ * Task 7.2.4 - JSON-LD schemas: WebPage, LocalBusiness (with areaServed), BreadcrumbList, FAQPage (conditional)
+ * Note: geo_hub page_type only gets BreadcrumbList per locked mapping table.
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import CTABlock from '../components/CTABlock.astro';
+import { generatePageSchemas } from '../lib/schema';
+
+interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    canonical_url?: string;
+    slug?: string;
+    page_type?: string;
+    faq_block?: any[];
+    noindex?: boolean;
+    geo?: {
+      state?: string;
+      city?: string;
+    };
+  };
+  Content?: any;
+}
+
+const { frontmatter = {}, Content } = Astro.props;
+
+const city = frontmatter.geo?.city || 'Tucson';
+const state = frontmatter.geo?.state || 'AZ';
+
+// Generate JSON-LD schemas
+// page_type drives schema generation per locked mapping table
+// geo_service gets full schemas, geo_hub gets BreadcrumbList only
+const pageData = {
+  title: frontmatter.title || `Estate transition help in ${city}`,
+  description: frontmatter.description || '',
+  canonical_url: frontmatter.canonical_url || '',
+  slug: frontmatter.slug || '',
+  page_type: frontmatter.page_type || 'geo_service',
+  faq_block: frontmatter.faq_block,
+  geo: frontmatter.geo,
+};
+
+const { schemas } = generatePageSchemas(pageData);
+---
+
+<BaseLayout 
+  title={frontmatter.title} 
+  description={frontmatter.description}
+  canonicalUrl={frontmatter.canonical_url}
+  noindex={frontmatter.noindex}
+  schemas={schemas}
+>
+  
+  <!-- GEO Hero Section -->
+  <Hero 
+    variant="geo"
+    eyebrow={`${city}, ${state}`}
+    title={frontmatter.title || `Estate transition help in ${city}`}
+    subtitle={frontmatter.description}
+    ctaLabel={`Get help in ${city}`}
+    ctaHref="/contact"
+  />
+  
+  <!-- Local Context Section -->
+  <section class="local-context">
+    <div class="container">
+      <h2>What makes {city} estates a little different</h2>
+      <div class="context-content">
+        <slot name="local-context">
+          <p>
+            {city} has its own mix of factors that show up in estate and senior transition properties. 
+            Understanding the local market helps me coordinate the right approach for your situation.
+          </p>
+          <ul class="context-bullets">
+            <li>A growing share of the population is 65 and older</li>
+            <li>Many 55+ communities and snowbird-style properties</li>
+            <li>Older homes with desert landscaping and sun exposure</li>
+            <li>Strong investor interest in certain neighborhoods</li>
+          </ul>
+        </slot>
+      </div>
+    </div>
+  </section>
+  
+  <!-- How I Help Here Section -->
+  <section class="how-i-help-here">
+    <div class="container">
+      <h2>What I handle in and around {city}</h2>
+      <div class="help-content">
+        <slot name="how-we-help">
+          <ul class="help-list">
+            <li>Walk the property or arrange a detailed virtual walkthrough</li>
+            <li>Help you think through contents: what to keep, donate, sell, or discard</li>
+            <li>Coordinate junk removal, donation pickups, and cleanout vendors</li>
+            <li>Line up cleaners, landscapers, and trades for realistic repairs</li>
+            <li>Advise on price and strategy for the {city} market</li>
+            <li>Manage showings, offers, negotiations, and escrow as a licensed Realtor</li>
+            <li>Keep heirs, trustees, and professionals updated with clear summaries</li>
+          </ul>
+        </slot>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Body Content from Markdown -->
+  <section class="markdown-content">
+    <div class="container">
+      <slot />
+    </div>
+  </section>
+  
+  <!-- Boundaries Section -->
+  <section class="boundaries">
+    <div class="container">
+      <h2>What I do and what I do not do</h2>
+      <div class="boundaries-grid">
+        <div class="boundary-column boundary-do">
+          <h3>What I handle</h3>
+          <slot name="what-i-do">
+            <ul>
+              <li>Coordinate cleanout, vendors, and property prep</li>
+              <li>Oversee the work and keep you updated</li>
+              <li>Price, list, and negotiate the home sale</li>
+              <li>Provide clear documentation for trustees and fiduciaries</li>
+            </ul>
+          </slot>
+        </div>
+        <div class="boundary-column boundary-dont">
+          <h3>What stays with you or your professionals</h3>
+          <slot name="what-i-dont-do">
+            <ul>
+              <li>Legal and tax decisions</li>
+              <li>Probate filings and court paperwork</li>
+              <li>Acting as executor, trustee, or fiduciary</li>
+              <li>Running a junk removal crew or labor service</li>
+            </ul>
+          </slot>
+        </div>
+      </div>
+      <p class="disclaimer-text">
+        I am not an attorney, accountant, or tax professional. I do not provide legal or tax advice. 
+        My role is to coordinate the property, vendors, and sale alongside your attorney or fiduciary.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Related Links Section -->
+  <section class="related-links">
+    <div class="container">
+      <h2>Related pages</h2>
+      <div class="links-grid">
+        <slot name="related-links">
+          <a href="/service-areas" class="related-link">
+            <span class="link-label">Service Areas Overview</span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a href="/az" class="related-link">
+            <span class="link-label">Arizona Hub</span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a href="/guides" class="related-link">
+            <span class="link-label">Guides and Resources</span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a href="/contact" class="related-link">
+            <span class="link-label">Contact</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </slot>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Local FAQs Section -->
+  <FAQAccordion 
+    heading={`Questions I hear a lot from ${city} families`}
+    faqs={frontmatter.faq_block || []}
+  />
+  
+  <!-- Final CTA -->
+  <CTABlock 
+    heading={`If your property is in or around ${city}, let's talk`}
+    text={`Share a few details about the property and your situation, and I will let you know how I can help.`}
+    ctaLabel="Talk through my situation"
+    ctaHref="/contact"
+  />
+  
+</BaseLayout>
+
+<style>
+  /* Local Context Section */
+  .local-context {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-white);
+  }
+  
+  .context-content {
+    max-width: 800px;
+  }
+  
+  .context-bullets {
+    margin-top: var(--spacing-md);
+  }
+  
+  .context-bullets li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  /* How I Help Here Section */
+  .how-i-help-here {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-warm);
+  }
+  
+  .help-list {
+    max-width: 700px;
+    columns: 2;
+    column-gap: var(--spacing-xl);
+  }
+  
+  .help-list li {
+    margin-bottom: var(--spacing-sm);
+    break-inside: avoid;
+  }
+  
+  /* Markdown Content */
+  .markdown-content {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-white);
+  }
+  
+  /* Boundaries Section */
+  .boundaries {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-warm);
+  }
+  
+  .boundaries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .boundary-column {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-white);
+    border-radius: 8px;
+  }
+  
+  .boundary-column h3 {
+    font-size: 1.1rem;
+    color: var(--color-teal-deep);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .boundary-column ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  
+  .disclaimer-text {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    opacity: 0.85;
+    margin: 0;
+    max-width: 800px;
+  }
+  
+  /* Related Links Section */
+  .related-links {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-white);
+  }
+  
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+    max-width: 800px;
+  }
+  
+  .related-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg-warm);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-gray-dark);
+    transition: background-color 0.2s ease;
+  }
+  
+  .related-link:hover {
+    background-color: var(--color-teal-deep);
+    color: white;
+  }
+  
+  .link-label {
+    font-size: 0.95rem;
+  }
+  
+  .link-arrow {
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .boundaries-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .help-list {
+      columns: 1;
+    }
+  }
+</style>

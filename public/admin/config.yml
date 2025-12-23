@@ -1,0 +1,288 @@
+# Decap CMS Configuration
+# Task 7.2.3 - Content wiring and frontmatter
+# 
+# This config defines collections that match:
+# - Astro Content Collections in src/content.config.ts
+# - Frontmatter schema in Content_Contract.md
+# 
+# Collections:
+# - pages: Core pages, services, personas (content/pages/)
+# - service_areas: Service areas and state hub (content/service-areas/)
+# - geo: GEO hubs and service pages (content/geo/)
+# - guides: Educational guides (content/guides/)
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+locale: "en"
+
+site_url: "https://cleanout2closing.com"
+
+collections:
+  # PAGES COLLECTION (files collection - fixed set of pages)
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    delete: false
+    editor:
+      preview: true
+    files:
+      - name: "home"
+        label: "Home"
+        file: "content/pages/home.md"
+        fields: &core_page_fields
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "description", label: "Meta Description", widget: "text" }
+          - { name: "slug", label: "Slug", widget: "string" }
+          - { name: "date", label: "Created Date", widget: "datetime", format: "YYYY-MM-DD" }
+          - { name: "updated", label: "Updated Date", widget: "datetime", format: "YYYY-MM-DD" }
+          - name: "page_type"
+            label: "Page Type"
+            widget: "select"
+            options: ["home", "service_pillar", "persona", "faqs", "about", "contact", "reviews", "services", "geo_service", "geo_hub", "guide"]
+          - name: "template"
+            label: "Template"
+            widget: "select"
+            options: ["home", "service_pillar", "persona", "faq", "about", "contact", "reviews", "services", "geo_service", "geo_hub", "guide"]
+          - { name: "tags", label: "Tags", widget: "list", required: false }
+          - { name: "main_entity", label: "Main Entity (for schema)", widget: "string" }
+          - { name: "canonical_url", label: "Canonical URL", widget: "string" }
+          - { name: "hero_image", label: "Hero Image", widget: "image", required: false }
+          - { name: "noindex", label: "Noindex", widget: "boolean", required: false, default: false }
+          - label: "FAQs"
+            name: "faq_block"
+            widget: "list"
+            required: false
+            fields:
+              - { name: "question", label: "Question", widget: "string" }
+              - { name: "answer", label: "Answer", widget: "markdown" }
+              - { name: "audience", label: "Audience", widget: "string", required: false }
+              - { name: "schema", label: "Include in FAQ Schema", widget: "boolean", required: false, default: true }
+          - { name: "body", label: "Body", widget: "markdown" }
+
+      - name: "how_it_works"
+        label: "How It Works"
+        file: "content/pages/how-it-works.md"
+        fields: *core_page_fields
+
+      - name: "services"
+        label: "Services Overview"
+        file: "content/pages/services.md"
+        fields: *core_page_fields
+
+      - name: "service_inherited_and_probate"
+        label: "Service – Inherited & Probate"
+        file: "content/pages/service-inherited-and-probate-property.md"
+        fields: *core_page_fields
+
+      - name: "service_senior_transitions"
+        label: "Service – Senior Transitions"
+        file: "content/pages/service-senior-transitions.md"
+        fields: *core_page_fields
+
+      - name: "service_trustee_support"
+        label: "Service – Trustee Support"
+        file: "content/pages/service-trustee-support.md"
+        fields: *core_page_fields
+
+      - name: "service_out_of_state_owners"
+        label: "Service – Out-of-State Owners"
+        file: "content/pages/service-out-of-state-owners.md"
+        fields: *core_page_fields
+
+      - name: "service_cleanout_and_vendor_coordination"
+        label: "Service – Cleanout & Vendor Coordination"
+        file: "content/pages/service-cleanout-and-vendor-coordination.md"
+        fields: *core_page_fields
+
+      - name: "for_heirs_and_prs"
+        label: "For Heirs & Personal Representatives"
+        file: "content/pages/for-heirs-and-personal-representatives.md"
+        fields: *core_page_fields
+
+      - name: "for_seniors_and_families"
+        label: "For Seniors & Their Families"
+        file: "content/pages/for-seniors-and-their-families.md"
+        fields: *core_page_fields
+
+      - name: "for_realtors_and_professionals"
+        label: "For Realtors & Professionals"
+        file: "content/pages/for-realtors-and-professionals.md"
+        fields: *core_page_fields
+
+      - name: "faqs"
+        label: "FAQs"
+        file: "content/pages/faqs.md"
+        fields: *core_page_fields
+
+      - name: "about"
+        label: "About"
+        file: "content/pages/about.md"
+        fields: *core_page_fields
+
+      - name: "contact"
+        label: "Contact"
+        file: "content/pages/contact.md"
+        fields: *core_page_fields
+
+      - name: "reviews"
+        label: "Reviews"
+        file: "content/pages/reviews.md"
+        fields: *core_page_fields
+
+  # SERVICE AREAS COLLECTION (files collection)
+  - name: "service_areas"
+    label: "Service Areas"
+    label_singular: "Service Area Page"
+    delete: false
+    editor:
+      preview: true
+    files:
+      - name: "service_areas_overview"
+        label: "Service Areas Overview"
+        file: "content/service-areas/service-areas.md"
+        fields: &service_areas_fields
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "description", label: "Meta Description", widget: "text" }
+          - { name: "slug", label: "Slug", widget: "string" }
+          - { name: "date", label: "Created Date", widget: "datetime", format: "YYYY-MM-DD" }
+          - { name: "updated", label: "Updated Date", widget: "datetime", format: "YYYY-MM-DD" }
+          - name: "page_type"
+            label: "Page Type"
+            widget: "select"
+            options: ["guide", "geo_hub", "service_pillar"]
+          - name: "template"
+            label: "Template"
+            widget: "select"
+            options: ["guide", "geo_hub", "service_pillar", "geo_service"]
+          - { name: "tags", label: "Tags", widget: "list", required: false }
+          - { name: "main_entity", label: "Main Entity (for schema)", widget: "string" }
+          - { name: "canonical_url", label: "Canonical URL", widget: "string" }
+          - { name: "hero_image", label: "Hero Image", widget: "image", required: false }
+          - { name: "noindex", label: "Noindex", widget: "boolean", required: false, default: false }
+          - label: "Location"
+            name: "geo"
+            widget: "object"
+            required: false
+            fields:
+              - { name: "state", label: "State", widget: "string", default: "AZ" }
+              - { name: "city", label: "City", widget: "string", required: false }
+          - label: "FAQs"
+            name: "faq_block"
+            widget: "list"
+            required: false
+            fields:
+              - { name: "question", label: "Question", widget: "string" }
+              - { name: "answer", label: "Answer", widget: "markdown" }
+              - { name: "audience", label: "Audience", widget: "string", required: false }
+              - { name: "schema", label: "Include in FAQ Schema", widget: "boolean", required: false, default: true }
+          - { name: "body", label: "Body", widget: "markdown" }
+
+      - name: "az_hub"
+        label: "Arizona Hub"
+        file: "content/service-areas/az.md"
+        fields: *service_areas_fields
+
+  # GEO COLLECTION (folder collection - allows creation of new GEO pages)
+  - name: "geo"
+    label: "GEO Pages"
+    label_singular: "GEO Page"
+    folder: "content/geo"
+    create: true
+    delete: false
+    format: "frontmatter"
+    extension: "md"
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "description", label: "Meta Description", widget: "text" }
+      - { name: "slug", label: "Slug", widget: "string" }
+      - { name: "date", label: "Created Date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { name: "updated", label: "Updated Date", widget: "datetime", format: "YYYY-MM-DD" }
+      - name: "page_type"
+        label: "Page Type"
+        widget: "select"
+        options: ["geo_service", "geo_hub", "guide"]
+      - name: "template"
+        label: "Template"
+        widget: "select"
+        options: ["geo_service", "geo_hub", "guide"]
+      - { name: "tags", label: "Tags", widget: "list", required: false }
+      - { name: "main_entity", label: "Main Entity (for schema)", widget: "string" }
+      - { name: "canonical_url", label: "Canonical URL", widget: "string" }
+      - { name: "hero_image", label: "Hero Image", widget: "image", required: false }
+      - { name: "noindex", label: "Noindex", widget: "boolean", required: false, default: false }
+      - label: "Location"
+        name: "geo"
+        widget: "object"
+        required: false
+        fields:
+          - { name: "state", label: "State", widget: "string", default: "AZ" }
+          - { name: "city", label: "City", widget: "string" }
+      - label: "FAQs"
+        name: "faq_block"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "question", label: "Question", widget: "string" }
+          - { name: "answer", label: "Answer", widget: "markdown" }
+          - { name: "audience", label: "Audience", widget: "string", required: false }
+          - { name: "schema", label: "Include in FAQ Schema", widget: "boolean", required: false, default: true }
+      - { name: "body", label: "Body", widget: "markdown" }
+
+  # GUIDES COLLECTION (folder collection - allows creation of new guides)
+  - name: "guides"
+    label: "Guides & Checklists"
+    label_singular: "Guide"
+    folder: "content/guides"
+    create: true
+    delete: false
+    format: "frontmatter"
+    extension: "md"
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "description", label: "Meta Description", widget: "text" }
+      - { name: "slug", label: "Slug", widget: "string" }
+      - { name: "date", label: "Created Date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { name: "updated", label: "Updated Date", widget: "datetime", format: "YYYY-MM-DD" }
+      - name: "page_type"
+        label: "Page Type"
+        widget: "select"
+        options: ["guide"]
+        default: "guide"
+      - name: "template"
+        label: "Template"
+        widget: "select"
+        options: ["guide"]
+        default: "guide"
+      - { name: "tags", label: "Tags", widget: "list", required: false }
+      - { name: "main_entity", label: "Main Entity (for schema)", widget: "string" }
+      - { name: "canonical_url", label: "Canonical URL", widget: "string" }
+      - { name: "hero_image", label: "Hero Image", widget: "image", required: false }
+      - { name: "noindex", label: "Noindex", widget: "boolean", required: false, default: false }
+      - label: "Location"
+        name: "geo"
+        widget: "object"
+        required: false
+        fields:
+          - { name: "state", label: "State", widget: "string", default: "AZ" }
+          - { name: "city", label: "City", widget: "string", required: false }
+      - label: "FAQs"
+        name: "faq_block"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "question", label: "Question", widget: "string" }
+          - { name: "answer", label: "Answer", widget: "markdown" }
+          - { name: "audience", label: "Audience", widget: "string", required: false }
+          - { name: "schema", label: "Include in FAQ Schema", widget: "boolean", required: false, default: true }
+      - { name: "body", label: "Body", widget: "markdown" }

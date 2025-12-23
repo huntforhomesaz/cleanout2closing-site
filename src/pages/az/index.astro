@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/az/index.astro
+ * Route: /az
+ * Content source: content/service-areas/az.md
+ * Layout: GeoServiceLayout (Arizona state hub)
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import GeoServiceLayout from '../../layouts/GeoServiceLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('serviceAreas', 'az');
+
+if (!entry) {
+  throw new Error('Content not found at content/service-areas/az.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<GeoServiceLayout frontmatter={frontmatter}>
+  <Content />
+</GeoServiceLayout>

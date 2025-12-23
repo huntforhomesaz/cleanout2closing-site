@@ -1,0 +1,80 @@
+---
+/**
+ * InlineCTA.astro
+ * Inline call-to-action component for use within article/guide content
+ * Less prominent than CTABlock, designed to blend with content flow
+ * 
+ * Task 7.2.5 - Forms, CTAs, and Lead Flow
+ */
+
+interface Props {
+  heading?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  variant?: 'default' | 'service-bridge';
+}
+
+const {
+  heading = 'If this sounds like your situation, I am happy to talk it through',
+  text = '',
+  ctaLabel = 'Talk through my situation',
+  ctaHref = '/contact',
+  variant = 'default',
+} = Astro.props;
+---
+
+<aside class:list={['inline-cta', `inline-cta--${variant}`]}>
+  <div class="inline-cta-content">
+    {heading && <h3 class="inline-cta-heading">{heading}</h3>}
+    
+    {text && <p class="inline-cta-text">{text}</p>}
+    
+    <slot />
+    
+    <a href={ctaHref} class="btn btn-primary btn-sm">{ctaLabel}</a>
+  </div>
+</aside>
+
+<style>
+  .inline-cta {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-warm);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-teal-deep);
+  }
+  
+  .inline-cta-content {
+    max-width: 600px;
+  }
+  
+  .inline-cta-heading {
+    color: var(--color-teal-deep);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .inline-cta-text {
+    color: var(--color-gray-dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+  
+  .inline-cta-text:last-of-type {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Service bridge variant - more prominent for guides */
+  .inline-cta--service-bridge {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-teal-deep);
+    border-left-width: 4px;
+  }
+  
+  /* Smaller button for inline context */
+  .btn-sm {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.95rem;
+  }
+</style>

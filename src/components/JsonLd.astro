@@ -1,0 +1,20 @@
+---
+/**
+ * src/components/JsonLd.astro
+ * JSON-LD script tag renderer
+ * Task 7.2.4 - JSON-LD and SEO wiring
+ * 
+ * Accepts one or more schema objects and renders them as
+ * <script type="application/ld+json"> tags in the document head.
+ */
+
+interface Props {
+  schemas: Record<string, unknown>[];
+}
+
+const { schemas } = Astro.props;
+---
+
+{schemas.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema, null, 0)} />
+))}

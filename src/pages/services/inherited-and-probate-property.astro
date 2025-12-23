@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/services/inherited-and-probate-property.astro
+ * Route: /services/inherited-and-probate-property
+ * Content source: content/pages/service-inherited-and-probate-property.md
+ * Layout: ServicePillarLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import ServicePillarLayout from '../../layouts/ServicePillarLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'service-inherited-and-probate-property');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/service-inherited-and-probate-property.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<ServicePillarLayout frontmatter={frontmatter}>
+  <Content />
+</ServicePillarLayout>

@@ -1,0 +1,303 @@
+---
+/**
+ * HomeLayout.astro
+ * Layout for the home page
+ * Sections per Page_Templates.md:
+ * - Hero
+ * - What situation are you in? (6 tiles)
+ * - How it works (3-4 steps)
+ * - Who I help
+ * - Why work with me
+ * - Proof/reviews
+ * - Service areas
+ * - FAQs
+ * - Final CTA
+ * 
+ * Task 7.2.4 - JSON-LD schemas: WebSite, LocalBusiness, BreadcrumbList, FAQPage (conditional)
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SituationCards from '../components/SituationCards.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import CTABlock from '../components/CTABlock.astro';
+import { generatePageSchemas } from '../lib/schema';
+
+interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    canonical_url?: string;
+    slug?: string;
+    page_type?: string;
+    faq_block?: any[];
+    noindex?: boolean;
+  };
+}
+
+const { frontmatter = {} } = Astro.props;
+
+// Generate JSON-LD schemas for home page
+const pageData = {
+  title: frontmatter.title || 'Cleanout2Closing | Estate Property Transition Services in Tucson',
+  description: frontmatter.description || 'Realtor-led estate transition help in Tucson. From cleanout to closing, I coordinate vendors and the home sale so families can focus on what matters most.',
+  canonical_url: frontmatter.canonical_url || 'https://cleanout2closing.com/',
+  slug: frontmatter.slug || '/',
+  page_type: 'home', // Always 'home' for this layout
+  faq_block: frontmatter.faq_block,
+};
+
+const { schemas } = generatePageSchemas(pageData);
+
+// Default process steps for home page
+const defaultSteps = [
+  {
+    title: 'Talk through your situation and goals',
+    description: 'We start with a conversation and, when possible, a property walkthrough. I listen, learn your timelines, and understand any legal or family constraints.',
+  },
+  {
+    title: 'Map out a clear plan and vendors',
+    description: 'I outline options for cleanout, repairs, and sale. When you are ready, I coordinate estimates from trusted vendors so you can compare choices.',
+  },
+  {
+    title: 'Coordinate cleanout, prep, and listing',
+    description: 'Once you approve the plan, I schedule and oversee vendors for cleanout, basic repairs, landscaping, and photos while preparing the home for sale.',
+  },
+  {
+    title: 'Guide the sale and keep you updated through escrow',
+    description: 'I handle pricing, marketing, and negotiation while keeping you, and your attorney or fiduciary when involved, in the loop until escrow is complete.',
+  },
+];
+---
+
+<BaseLayout 
+  title={pageData.title} 
+  description={pageData.description}
+  canonicalUrl={pageData.canonical_url}
+  noindex={frontmatter.noindex}
+  schemas={schemas}
+>
+  
+  <!-- Hero Section -->
+  <Hero 
+    variant="home"
+    title="From cleanout to closing in Tucson, handled for you"
+    subtitle="Facing a family transition or the loss of a loved one is hard enough. Figuring out what to do with the property should not add to the burden."
+    ctaLabel="Schedule a free strategy call"
+    ctaHref="/contact"
+    secondaryCtaLabel="See how it works"
+    secondaryCtaHref="/how-it-works"
+  />
+  
+  <!-- What Situation Are You In? -->
+  <SituationCards />
+  
+  <!-- How It Works -->
+  <ProcessSteps 
+    heading="How I take you from cleanout to closing"
+    steps={defaultSteps}
+    variant="horizontal"
+  />
+  
+  <!-- Who I Help Section -->
+  <section class="who-i-help">
+    <div class="container">
+      <h2>Who I help</h2>
+      <p class="section-intro">Cleanout2Closing is built for people who need more than "just list the house."</p>
+      
+      <ul class="audience-list">
+        <li>Heirs and beneficiaries who have just inherited a Tucson property</li>
+        <li>Trustees and personal representatives who need documentation and clear communication</li>
+        <li>Seniors and adult children managing a move or downsizing</li>
+        <li>Out-of-state owners who cannot be here in person</li>
+        <li>Attorneys, fiduciaries, and Realtors who need a trusted property-side partner</li>
+      </ul>
+      
+      <p class="section-note">If you are not sure whether your situation fits, that is okay. A short conversation can usually make that clear.</p>
+    </div>
+  </section>
+  
+  <!-- Why Work With Me Section -->
+  <section class="why-work-with-me bg-white">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Why work with me</h2>
+          <p>Cleanout2Closing is led by me, Bradley Hunt.</p>
+          
+          <ul class="credentials-list">
+            <li>Licensed Realtor in Tucson, Arizona</li>
+            <li>Member of The Stratton Group, a top real estate team at Keller Williams</li>
+            <li>U.S. Navy veteran</li>
+            <li>Tucson resident for over 38 years</li>
+            <li>Former owner of Grunt-Work LLC, a successful cleanout and demolition company</li>
+          </ul>
+          
+          <p>This mix of experience means I understand both the real estate side and the practical realities of vendors, equipment, and timelines.</p>
+        </div>
+        
+        <div class="about-image">
+          <img 
+            src="/images/c2c/bradley-headshot.png" 
+            alt="Bradley Hunt" 
+            class="headshot"
+            width="300"
+            height="300"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Proof / Reviews Section -->
+  <section class="proof-section">
+    <div class="container">
+      <h2>Real families. Real transitions. Real results.</h2>
+      <p class="section-intro">Over the years, families, professionals, and vendors in Tucson have trusted me with complex cleanouts, property prep, and clear communication.</p>
+      
+      <div class="proof-placeholder">
+        <p><em>Testimonials and case examples will be displayed here.</em></p>
+        <a href="/reviews" class="btn btn-secondary">See all reviews</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Service Areas Section -->
+  <section class="service-areas-section bg-white">
+    <div class="container">
+      <h2>Where I currently help families</h2>
+      <p class="section-intro">Cleanout2Closing is based in Tucson and focused on Southern Arizona.</p>
+      
+      <ul class="areas-list">
+        <li><a href="/az/tucson">Tucson and greater Tucson</a></li>
+        <li>Oro Valley and Marana</li>
+        <li>Vail and the Rita Ranch area</li>
+        <li><a href="/az/green-valley">Green Valley, Sahuarita, and Catalina</a></li>
+      </ul>
+      
+      <p><a href="/service-areas">See all service areas →</a></p>
+    </div>
+  </section>
+  
+  <!-- Additional Content from Markdown (if any) -->
+  <section class="additional-content">
+    <div class="container">
+      <slot />
+    </div>
+  </section>
+  
+  <!-- FAQs Section -->
+  <FAQAccordion 
+    heading="Common questions"
+    faqs={frontmatter.faq_block || []}
+  />
+  
+  <!-- Final CTA -->
+  <CTABlock 
+    heading="Tell me what you are facing, and I will map out your options"
+    text="If a Tucson-area property is weighing on you, you do not have to figure it out alone."
+    ctaLabel="Start here"
+    ctaHref="/contact"
+  />
+  
+</BaseLayout>
+
+<style>
+  /* Who I Help Section */
+  .who-i-help {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-white);
+  }
+  
+  .section-intro {
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .audience-list {
+    max-width: 600px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .audience-list li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .section-note {
+    color: var(--color-gray-dark);
+    opacity: 0.85;
+    font-style: italic;
+  }
+  
+  /* Why Work With Me Section */
+  .why-work-with-me {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--spacing-xl);
+    align-items: start;
+  }
+  
+  .credentials-list {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .headshot {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Proof Section */
+  .proof-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-warm);
+    text-align: center;
+  }
+  
+  .proof-section .container {
+    max-width: 800px;
+  }
+  
+  .proof-placeholder {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-white);
+    border-radius: 8px;
+    margin-top: var(--spacing-lg);
+  }
+  
+  /* Service Areas Section */
+  .service-areas-section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .areas-list {
+    max-width: 500px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+      order: -1;
+    }
+    
+    .headshot {
+      max-width: 200px;
+    }
+  }
+</style>

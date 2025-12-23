@@ -1,0 +1,264 @@
+---
+/**
+ * GuideLayout.astro
+ * Layout for guide/article pages
+ * Sections per Page_Templates.md:
+ * - Hero with search-friendly title
+ * - Short intro
+ * - Quick answer / TL;DR
+ * - When this applies
+ * - Step-by-step content
+ * - Service bridge
+ * - Local nuances
+ * - FAQs
+ * - Soft CTA
+ * 
+ * Task 7.2.4 - JSON-LD schemas: BlogPosting, BreadcrumbList, FAQPage (conditional)
+ * Note: Also used by FAQs page which has page_type 'faqs' - gets BreadcrumbList only.
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import CTABlock from '../components/CTABlock.astro';
+import InlineCTA from '../components/InlineCTA.astro';
+import { generatePageSchemas } from '../lib/schema';
+
+interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    canonical_url?: string;
+    slug?: string;
+    page_type?: string;
+    faq_block?: any[];
+    noindex?: boolean;
+    geo?: {
+      state?: string;
+      city?: string;
+    };
+    date?: string;
+    updated?: string;
+  };
+  Content?: any;
+}
+
+const { frontmatter = {}, Content } = Astro.props;
+
+const city = frontmatter.geo?.city || 'Tucson';
+
+// Generate JSON-LD schemas
+// page_type 'guide' gets BlogPosting, others get BreadcrumbList only
+const pageData = {
+  title: frontmatter.title || 'Guide',
+  description: frontmatter.description || '',
+  canonical_url: frontmatter.canonical_url || '',
+  slug: frontmatter.slug || '',
+  page_type: frontmatter.page_type || 'guide',
+  faq_block: frontmatter.faq_block,
+  date: frontmatter.date,
+  updated: frontmatter.updated,
+  geo: frontmatter.geo,
+};
+
+const { schemas } = generatePageSchemas(pageData);
+---
+
+<BaseLayout 
+  title={frontmatter.title} 
+  description={frontmatter.description}
+  canonicalUrl={frontmatter.canonical_url}
+  noindex={frontmatter.noindex}
+  schemas={schemas}
+  ogType="article"
+>
+  
+  <!-- Guide Hero -->
+  <Hero 
+    variant="guide"
+    eyebrow="Guide"
+    title={frontmatter.title || 'Guide'}
+  />
+  
+  <!-- Article Content -->
+  <article class="guide-article">
+    <div class="container">
+      
+      <!-- Intro -->
+      <div class="guide-intro">
+        <p class="intro-text">{frontmatter.description}</p>
+        
+        {(frontmatter.date || frontmatter.updated) && (
+          <p class="guide-meta">
+            {frontmatter.updated 
+              ? `Last updated: ${frontmatter.updated}` 
+              : `Published: ${frontmatter.date}`
+            }
+          </p>
+        )}
+      </div>
+      
+      <!-- Quick Answer / TL;DR Box -->
+      <aside class="tldr-box">
+        <h2 class="tldr-heading">Short answer if you are reading this in a hurry</h2>
+        <slot name="quick-answer">
+          <p>This guide will walk you through the key steps and considerations. Read on for the full breakdown, or jump straight to the section that applies to your situation.</p>
+        </slot>
+      </aside>
+      
+      <!-- When This Applies -->
+      <section class="when-applies">
+        <h2>When this guide will be helpful to you</h2>
+        <slot name="when-applies">
+          <p>This guide is for you if:</p>
+          <ul>
+            <li>You are dealing with a property transition in the {city} area</li>
+            <li>You need practical steps, not just general advice</li>
+            <li>You want to understand your options before making decisions</li>
+          </ul>
+        </slot>
+      </section>
+      
+      <!-- Main Guide Body (from Markdown) -->
+      <div class="guide-body">
+        <slot />
+      </div>
+      
+      <!-- Service Bridge - Mid-article CTA -->
+      <InlineCTA 
+        variant="service-bridge"
+        heading="If this sounds like your situation, I am happy to talk it through"
+        text={`If you are dealing with this situation in ${city}, I can help coordinate the property side while your attorney or fiduciary handles the legal and financial decisions.`}
+        ctaLabel="Talk through my situation"
+        ctaHref="/contact"
+      >
+        <p>
+          <a href="/services">Learn about my services</a> or 
+          <a href="/az/tucson">see how I help in {city}</a>.
+        </p>
+      </InlineCTA>
+      
+      <!-- Local Nuances -->
+      <section class="local-nuances">
+        <h2>What is different here in {city}</h2>
+        <slot name="local-nuances">
+          <p>
+            While the general principles in this guide apply broadly, there are some 
+            {city}-specific considerations to keep in mind.
+          </p>
+        </slot>
+      </section>
+      
+    </div>
+  </article>
+  
+  <!-- FAQs Section -->
+  <FAQAccordion 
+    heading="Related questions"
+    faqs={frontmatter.faq_block || []}
+  />
+  
+  <!-- Soft CTA -->
+  <CTABlock 
+    variant="subtle"
+    heading="You do not have to figure this out alone"
+    text="Tell me what is going on, and I will walk you through realistic options."
+    ctaLabel="Talk through my situation"
+    ctaHref="/contact"
+  />
+  
+</BaseLayout>
+
+<style>
+  .guide-article {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .guide-article .container {
+    max-width: 800px;
+  }
+  
+  /* Intro */
+  .guide-intro {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .intro-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--color-gray-dark);
+  }
+  
+  .guide-meta {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    opacity: 0.7;
+    margin-top: var(--spacing-sm);
+  }
+  
+  /* TL;DR Box */
+  .tldr-box {
+    background-color: var(--color-bg-warm);
+    border-left: 4px solid var(--color-teal-deep);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .tldr-heading {
+    font-size: 1.1rem;
+    color: var(--color-teal-deep);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .tldr-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* When Applies */
+  .when-applies {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .when-applies ul {
+    margin-bottom: 0;
+  }
+  
+  /* Guide Body */
+  .guide-body {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .guide-body h2 {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .guide-body h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  
+  .guide-body h3 {
+    margin-top: var(--spacing-lg);
+  }
+  
+  /* Local Nuances */
+  .local-nuances {
+    background-color: var(--color-bg-warm);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .local-nuances h2 {
+    margin-top: 0;
+  }
+  
+  .local-nuances p:last-child {
+    margin-bottom: 0;
+  }
+</style>

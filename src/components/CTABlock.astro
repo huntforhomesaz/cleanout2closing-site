@@ -1,0 +1,114 @@
+---
+/**
+ * CTABlock.astro
+ * Reusable call-to-action section component
+ * Used at the bottom of most page layouts
+ */
+
+interface Props {
+  heading?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
+  variant?: 'default' | 'dark' | 'subtle';
+}
+
+const {
+  heading = 'Tell me what you are facing',
+  text = 'If a Tucson-area property is weighing on you, you do not have to figure it out alone.',
+  ctaLabel = 'Start with a free strategy call',
+  ctaHref = '/contact',
+  secondaryCtaLabel = '',
+  secondaryCtaHref = '',
+  variant = 'default',
+} = Astro.props;
+---
+
+<section class:list={['cta-block', `cta-block--${variant}`]}>
+  <div class="cta-container">
+    <h2 class="cta-heading">{heading}</h2>
+    
+    {text && <p class="cta-text">{text}</p>}
+    
+    <slot />
+    
+    <div class="cta-actions">
+      <a href={ctaHref} class="btn btn-primary">{ctaLabel}</a>
+      {secondaryCtaLabel && (
+        <a href={secondaryCtaHref} class="btn btn-secondary">{secondaryCtaLabel}</a>
+      )}
+    </div>
+    
+    <p class="cta-reassurance">No pressure, no spam, just a clear plan.</p>
+  </div>
+</section>
+
+<style>
+  .cta-block {
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    background-color: var(--color-bg-warm);
+  }
+  
+  .cta-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+  
+  .cta-heading {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-gray-dark);
+  }
+  
+  .cta-text {
+    font-size: 1.125rem;
+    color: var(--color-gray-dark);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .cta-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .cta-reassurance {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    opacity: 0.7;
+    margin: 0;
+  }
+  
+  /* Dark variant - for use on white backgrounds */
+  .cta-block--dark {
+    background-color: var(--color-teal-deep);
+    color: white;
+  }
+  
+  .cta-block--dark .cta-heading {
+    color: white;
+  }
+  
+  .cta-block--dark .cta-text {
+    color: white;
+  }
+  
+  .cta-block--dark .cta-reassurance {
+    color: white;
+    opacity: 0.8;
+  }
+  
+  /* Subtle variant - minimal styling */
+  .cta-block--subtle {
+    background-color: transparent;
+    padding: var(--spacing-xl) 0;
+    border-top: 1px solid #e5e5e5;
+  }
+</style>

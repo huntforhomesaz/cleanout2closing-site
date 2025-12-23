@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/services/senior-transitions.astro
+ * Route: /services/senior-transitions
+ * Content source: content/pages/service-senior-transitions.md
+ * Layout: ServicePillarLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import ServicePillarLayout from '../../layouts/ServicePillarLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'service-senior-transitions');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/service-senior-transitions.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<ServicePillarLayout frontmatter={frontmatter}>
+  <Content />
+</ServicePillarLayout>

@@ -1,0 +1,158 @@
+---
+/**
+ * Analytics.astro
+ * Google Analytics 4 (GA4) integration component
+ * Task 7.2.6 - Analytics and Search Console
+ * 
+ * Features:
+ * - Loads gtag.js once, globally
+ * - Respects Do Not Track (DNT) setting
+ * - Environment-aware (production only by default)
+ * - Centralized event tracking setup
+ * - Non-blocking script loading
+ * 
+ * Usage: Include once in BaseLayout.astro
+ */
+
+import { GA4_CONFIG } from '../config/analytics';
+
+const { measurementId, debug } = GA4_CONFIG;
+---
+
+<!-- 
+  GA4 Analytics Script
+  Loaded with async for non-blocking behavior
+  Only renders if analytics is configured
+-->
+{measurementId && measurementId !== 'G-XXXXXXXXXX' && (
+  <>
+    <!-- Google tag (gtag.js) -->
+    <script 
+      async 
+      src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+      is:inline
+    />
+    
+    <!-- GA4 Configuration and Event Tracking Setup -->
+    <script 
+      is:inline 
+      define:vars={{ measurementId, debug }}
+    >
+      // Initialize dataLayer
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Check Do Not Track
+      function isDNTEnabled() {
+        var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+        return dnt === '1' || dnt === 'yes';
+      }
+      
+      // Check if production
+      function isProduction() {
+        return window.location.hostname === 'cleanout2closing.com' ||
+               window.location.hostname === 'www.cleanout2closing.com';
+      }
+      
+      // Only initialize if conditions are met
+      if (!isDNTEnabled() && (isProduction() || debug)) {
+        gtag('js', new Date());
+        gtag('config', measurementId, {
+          // Anonymize IP for privacy
+          anonymize_ip: true,
+          // Enable debug mode if configured
+          debug_mode: debug,
+        });
+        
+        if (debug) {
+          console.log('[Analytics] GA4 initialized:', measurementId);
+        }
+      } else {
+        if (debug) {
+          console.log('[Analytics] GA4 not loaded - DNT:', isDNTEnabled(), 'Production:', isProduction());
+        }
+        // Create stub gtag function to prevent errors
+        window.gtag = function() {
+          if (debug) {
+            console.log('[Analytics] Event ignored (analytics disabled):', arguments);
+          }
+        };
+      }
+      
+      // ========================================
+      // Event Tracking Setup
+      // ========================================
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // Track CTA button clicks
+        document.querySelectorAll('.btn-primary, .btn-secondary, [data-cta]').forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+            var target = e.currentTarget;
+            var ctaVariant = target.getAttribute('data-cta') || 
+                            target.textContent.trim().substring(0, 50) || 
+                            'unknown';
+            var pageType = document.body.getAttribute('data-page-type') || 
+                          document.querySelector('meta[name="page-type"]')?.content || 
+                          'unknown';
+            
+            gtag('event', 'cta_click', {
+              cta_variant: ctaVariant,
+              page_type: pageType,
+              page_path: window.location.pathname,
+            });
+            
+            if (debug) {
+              console.log('[Analytics] CTA click:', ctaVariant);
+            }
+          });
+        });
+        
+        // Track phone link clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            var target = e.currentTarget;
+            gtag('event', 'phone_click', {
+              link_text: target.textContent.trim(),
+              link_url: target.href,
+              page_path: window.location.pathname,
+            });
+            
+            if (debug) {
+              console.log('[Analytics] Phone click:', target.href);
+            }
+          });
+        });
+        
+        // Track email link clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            var target = e.currentTarget;
+            gtag('event', 'email_click', {
+              link_url: target.href,
+              page_path: window.location.pathname,
+            });
+            
+            if (debug) {
+              console.log('[Analytics] Email click:', target.href);
+            }
+          });
+        });
+        
+        if (debug) {
+          console.log('[Analytics] Event listeners attached');
+        }
+      });
+    </script>
+  </>
+)}
+
+<!-- 
+  Placeholder message for unconfigured analytics
+  Only shows in development with debug enabled
+-->
+{(!measurementId || measurementId === 'G-XXXXXXXXXX') && (
+  <script is:inline>
+    console.log('[Analytics] GA4 not configured - replace G-XXXXXXXXXX in src/config/analytics.ts with your Measurement ID');
+  </script>
+)}

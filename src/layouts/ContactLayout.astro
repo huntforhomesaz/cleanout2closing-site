@@ -1,0 +1,312 @@
+---
+/**
+ * ContactLayout.astro
+ * Layout for the contact page
+ * Sections per Page_Templates.md:
+ * - Simple hero
+ * - "Who this is for" bullets
+ * - "What happens when you contact me" steps
+ * - Trust and compliance notes
+ * - Contact form
+ * - Response time
+ * - FAQs
+ * 
+ * Task 7.2.4 - JSON-LD schemas: WebPage, LocalBusiness, BreadcrumbList, FAQPage (conditional)
+ * Task 7.2.5 - Form implementation complete
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { generatePageSchemas } from '../lib/schema';
+
+interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    canonical_url?: string;
+    slug?: string;
+    page_type?: string;
+    faq_block?: any[];
+    noindex?: boolean;
+  };
+  Content?: any;
+}
+
+const { frontmatter = {}, Content } = Astro.props;
+
+// Generate JSON-LD schemas for contact page
+const pageData = {
+  title: frontmatter.title || 'Contact | Cleanout2Closing',
+  description: frontmatter.description || 'Contact Cleanout2Closing for estate transition help in Tucson.',
+  canonical_url: frontmatter.canonical_url || 'https://cleanout2closing.com/contact',
+  slug: frontmatter.slug || '/contact',
+  page_type: 'contact', // Always 'contact' for this layout
+  faq_block: frontmatter.faq_block,
+};
+
+const { schemas } = generatePageSchemas(pageData);
+
+const defaultSteps = [
+  {
+    title: 'You share a few basics about the property and your situation',
+    description: 'Use the form, email, or phone. Whatever is easiest for you.',
+  },
+  {
+    title: 'I review and let you know if I am the right fit',
+    description: 'Usually within one business day, I will respond with initial thoughts.',
+  },
+  {
+    title: 'We schedule a time to walk the property or talk through next steps',
+    description: 'No pressure, no obligation. Just a conversation to map out your options.',
+  },
+];
+---
+
+<BaseLayout 
+  title={pageData.title} 
+  description={pageData.description}
+  canonicalUrl={pageData.canonical_url}
+  noindex={frontmatter.noindex}
+  schemas={schemas}
+>
+  
+  <!-- Hero Section -->
+  <Hero 
+    variant="contact"
+    title="Tell me what you are facing, and I will map out your options"
+    subtitle="If a Tucson-area property is weighing on you, a quick conversation can help clarify your next steps."
+  />
+  
+  <!-- Main Contact Content -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Left Column: Info -->
+        <div class="contact-info">
+          
+          <!-- Who This Is For -->
+          <div class="info-section">
+            <h2>This is for you if:</h2>
+            <ul class="for-list">
+              <li>You have inherited a property in Tucson and need to figure out next steps</li>
+              <li>You are a trustee or personal representative with a property to manage</li>
+              <li>A parent or loved one is moving and the house needs to be handled</li>
+              <li>You live out of state and need local help with a Tucson property</li>
+              <li>You are a professional (attorney, fiduciary, Realtor) looking for a property-side partner</li>
+            </ul>
+            <p class="not-for">
+              <strong>Not sure if this applies to you?</strong> That is okay. Reach out anyway and I will tell you honestly if I can help.
+            </p>
+          </div>
+          
+          <!-- What Happens -->
+          <div class="info-section">
+            <h2>What happens when you reach out</h2>
+            <ProcessSteps 
+              heading=""
+              steps={defaultSteps}
+              variant="vertical"
+            />
+          </div>
+          
+          <!-- Trust Block -->
+          <div class="trust-block">
+            <h3>What you can expect from me</h3>
+            <ul>
+              <li><strong>No pressure:</strong> I do not chase or push. You are in control of the pace.</li>
+              <li><strong>No spam:</strong> Your information stays private. No lists, no marketing blasts.</li>
+              <li><strong>Honest answers:</strong> If I am not the right fit, I will tell you and point you elsewhere if I can.</li>
+            </ul>
+            <p class="disclaimer">
+              I am not an attorney, accountant, or tax professional. I do not provide legal or tax advice. 
+              My role is to coordinate the property, vendors, and sale alongside your attorney or fiduciary.
+            </p>
+          </div>
+          
+        </div>
+        
+        <!-- Right Column: Form Area -->
+        <div class="contact-form-area">
+          <div class="form-card">
+            <h2>Send me a message</h2>
+            
+            <!-- Contact Form Component -->
+            <ContactForm 
+              variant="full"
+              pageUrl={pageData.canonical_url}
+              pageType={pageData.page_type}
+              pageTitle={pageData.title}
+              template="contact"
+              geoCity="Tucson"
+              geoState="AZ"
+              formVariant="contact_main"
+            />
+            
+            <!-- Response Time -->
+            <p class="response-time">
+              I usually respond within one business day. If your situation is urgent, mention that in your message.
+            </p>
+          </div>
+          
+          <!-- Alternative Contact -->
+          <div class="alt-contact">
+            <p><strong>Prefer to email directly?</strong></p>
+            <p>
+              Email: <a href="mailto:bradley@cleanout2closing.com">bradley@cleanout2closing.com</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Body Content from Markdown (if any) -->
+  <section class="additional-content">
+    <div class="container">
+      <slot />
+    </div>
+  </section>
+  
+  <!-- FAQs Section -->
+  <FAQAccordion 
+    heading="Common questions about reaching out"
+    faqs={frontmatter.faq_block || []}
+  />
+  
+</BaseLayout>
+
+<style>
+  .contact-main {
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: start;
+  }
+  
+  /* Info Column */
+  .contact-info {
+    /* Left column */
+  }
+  
+  .info-section {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .info-section h2 {
+    font-size: 1.375rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .for-list {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .for-list li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .not-for {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+    opacity: 0.85;
+  }
+  
+  /* Trust Block */
+  .trust-block {
+    background-color: var(--color-bg-warm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 8px;
+  }
+  
+  .trust-block h3 {
+    color: var(--color-teal-deep);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .trust-block ul {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .trust-block .disclaimer {
+    font-size: 0.85rem;
+    color: var(--color-gray-dark);
+    opacity: 0.8;
+    margin: 0;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  /* Form Area */
+  .contact-form-area {
+    position: sticky;
+    top: 100px;
+  }
+  
+  /* Form Card */
+  .form-card {
+    background-color: var(--color-bg-white);
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .response-time {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    opacity: 0.8;
+    text-align: center;
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+  }
+  
+  /* Alt Contact */
+  .alt-contact {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-warm);
+    border-radius: 8px;
+  }
+  
+  .alt-contact p {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 0.95rem;
+  }
+  
+  .alt-contact p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Additional Content */
+  .additional-content {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-warm);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form-area {
+      position: static;
+    }
+  }
+</style>

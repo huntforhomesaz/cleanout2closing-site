@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/az/tucson/out-of-state-owner-help.astro
+ * Route: /az/tucson/out-of-state-owner-help
+ * Content source: content/geo/az-tucson-out-of-state-owner-help.md
+ * Layout: GeoServiceLayout
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import GeoServiceLayout from '../../../layouts/GeoServiceLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('geo', 'az-tucson-out-of-state-owner-help');
+
+if (!entry) {
+  throw new Error('Content not found at content/geo/az-tucson-out-of-state-owner-help.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<GeoServiceLayout frontmatter={frontmatter}>
+  <Content />
+</GeoServiceLayout>

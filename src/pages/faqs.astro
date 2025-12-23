@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/faqs.astro
+ * Route: /faqs
+ * Content source: content/pages/faqs.md
+ * Layout: GuideLayout (FAQ pages use guide-style layout)
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import GuideLayout from '../layouts/GuideLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'faqs');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/faqs.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<GuideLayout frontmatter={frontmatter}>
+  <Content />
+</GuideLayout>

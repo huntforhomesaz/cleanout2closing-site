@@ -1,0 +1,26 @@
+---
+/**
+ * src/pages/for-realtors-and-professionals.astro
+ * Route: /for-realtors-and-professionals
+ * Content source: content/pages/for-realtors-and-professionals.md
+ * Layout: ServicePillarLayout (persona pages use service pillar layout)
+ * Task 7.2.3 - Content wiring complete
+ */
+
+import { getEntry, render } from 'astro:content';
+import ServicePillarLayout from '../layouts/ServicePillarLayout.astro';
+
+// Load content from collection
+const entry = await getEntry('pages', 'for-realtors-and-professionals');
+
+if (!entry) {
+  throw new Error('Content not found at content/pages/for-realtors-and-professionals.md');
+}
+
+const { Content } = await render(entry);
+const frontmatter = entry.data;
+---
+
+<ServicePillarLayout frontmatter={frontmatter}>
+  <Content />
+</ServicePillarLayout>
