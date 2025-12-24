@@ -2,25 +2,25 @@
 /**
  * src/pages/index.astro
  * Route: /
- * Content source: content/pages/home.md
+ * Content source: content/pages/home.md (frontmatter only - body is for SEO reference)
  * Layout: HomeLayout
  * Task 7.2.3 - Content wiring complete
+ * Task 7.2.8.1 - Fixed duplication by using layout-defined sections only
  */
 
-import { getEntry, render } from 'astro:content';
+import { getEntry } from 'astro:content';
 import HomeLayout from '../layouts/HomeLayout.astro';
 
-// Load home page content from collection
+// Load home page content from collection (frontmatter for SEO/schema data)
 const homeEntry = await getEntry('pages', 'home');
 
 if (!homeEntry) {
   throw new Error('Home page content not found at content/pages/home.md');
 }
 
-const { Content } = await render(homeEntry);
+// Note: We only use frontmatter data. The markdown body in home.md serves as 
+// content reference/SEO text but is not rendered - HomeLayout defines all sections.
 const frontmatter = homeEntry.data;
 ---
 
-<HomeLayout frontmatter={frontmatter}>
-  <Content />
-</HomeLayout>
+<HomeLayout frontmatter={frontmatter} />
