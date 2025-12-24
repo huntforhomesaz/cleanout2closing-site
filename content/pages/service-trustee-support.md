@@ -116,7 +116,7 @@ The property process can still follow a clear path.
 
 Here is how I typically support trustees and personal representatives in Tucson.
 
-### Step 1 â€“ Understand your role, authority, and constraints
+### Step 1 — Understand your role, authority, and constraints
 
 We start with a focused conversation.
 
@@ -131,7 +131,7 @@ We talk about:
 I do not interpret your legal documents.  
 Instead, I listen to how your attorney or fiduciary has framed your responsibilities so the property plan can align with that.
 
-### Step 2 â€“ Walk and document the property
+### Step 2 — Walk and document the property
 
 Next, I walk the property, either with you or on your behalf.
 
@@ -146,7 +146,7 @@ You receive photos and a simple written summary that you can share with your att
 
 This becomes the factual base for decisions about what work to do and how to sell.
 
-### Step 3 â€“ Build a property plan that fits your legal guidance
+### Step 3 — Build a property plan that fits your legal guidance
 
 From there, I draft a clear, written plan that connects:
 
@@ -159,7 +159,7 @@ From there, I draft a clear, written plan that connects:
 You can review this plan with your attorney or fiduciary and adjust it as needed.  
 The goal is a property plan that is realistic, documented, and aligned with your responsibilities.
 
-### Step 4 â€“ Coordinate vendors and track approvals
+### Step 4 — Coordinate vendors and track approvals
 
 With your approval, I begin lining up vendors in a logical sequence.
 
@@ -182,11 +182,11 @@ As work moves forward, I:
 
 This keeps the work moving while also supporting your need for clear records.
 
-### Step 5 â€“ Align prep and pricing with your fiduciary duties
+### Step 5 — Align prep and pricing with your fiduciary duties
 
 Trust and estate property decisions come with an extra question:
 
-â€œIs this reasonable and defensible given my role?â€
+"Is this reasonable and defensible given my role?"
 
 I help you and your attorney or fiduciary compare options such as:
 
@@ -202,7 +202,7 @@ We look at:
 
 My job is to give you clear property-side information so your legal and financial advisors can help you make a well-reasoned choice.
 
-### Step 6 â€“ List, sell, and close the property
+### Step 6 — List, sell, and close the property
 
 When the home is ready, I represent you as your Tucson Realtor.
 
@@ -261,7 +261,7 @@ Clear roles help you stay protected.
 ### What I do
 
 - Coordinate the property side of a trust or estate home in Tucson.  
-- Document the homeâ€™s condition and needed work.  
+- Document the home's condition and needed work.  
 - Build and adjust a written property plan that fits your legal guidance.  
 - Identify, introduce, and coordinate independent vendors and trades.  
 - Organize estimates, invoices, receipts, and approval notes.  

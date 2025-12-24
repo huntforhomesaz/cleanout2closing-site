@@ -75,7 +75,7 @@ noindex: false
 
 If you are dealing with an inherited house in Tucson or elsewhere in Pima County, you might be hearing a lot of mixed messages about probate.
 
-Some people say â€œyou cannot do anything until probate is done.â€ Others say â€œjust sell the house and sort it out later.â€ The truth sits in the middle, and it depends on the type of probate and what the court has ordered.
+Some people say "you cannot do anything until probate is done." Others say "just sell the house and sort it out later." The truth sits in the middle, and it depends on the type of probate and what the court has ordered.
 
 This guide walks through a typical Pima County probate timeline and shows where the **sale of the house** usually fits. It is written in plain English and focuses on the property side, not the legal technicalities.
 
@@ -87,13 +87,13 @@ I am not an attorney. I am a Tucson Realtor and estate transition concierge. I c
 
 Every estate is different, but here is a common pattern for an **informal probate** with a house in Pima County:
 
-- Roughly weeks 1â€“8:  
+- Roughly weeks 1–8:  
   Attorney files to open the estate and have a personal representative appointed. The personal representative starts gathering information and securing the property.
 
-- Months 2â€“6 (minimum four months for creditor claims):  
+- Months 2–6 (minimum four months for creditor claims):  
   Notice to creditors runs. The personal representative gathers assets, deals with basic bills, and often **prepares and sells the house** during this window.
 
-- Months 5â€“8+:  
+- Months 5–8+:  
   Debts and expenses are paid. Any remaining property issues are resolved. Once everything is in order, the estate can be wrapped up and closed.
 
 Formal or supervised probates, or cases with disputes, can take longer. The sale of the house often happens **while the probate is still open**, not only at the very end.
@@ -121,7 +121,7 @@ For those questions, you always want to talk with an Arizona probate attorney, f
 
 ---
 
-## Step 1 â€“ Opening the estate and appointing a personal representative
+## Step 1 — Opening the estate and appointing a personal representative
 
 The probate process begins when someone files papers to open the estate in Pima County Superior Court. In most families, this is done with help from a probate attorney.
 
@@ -131,13 +131,13 @@ Early tasks usually include:
 - Filing an application or petition to start probate.  
 - Asking the court to appoint a **personal representative** (sometimes called an executor).
 
-The personal representative is the person the court authorizes to manage the estateâ€™s affairs. Once they are formally appointed, they have duties and powers under Arizona law, which generally include taking control of estate assets, including real estate, and managing them responsibly.
+The personal representative is the person the court authorizes to manage the estate's affairs. Once they are formally appointed, they have duties and powers under Arizona law, which generally include taking control of estate assets, including real estate, and managing them responsibly.
 
 From the property side, nothing major should happen with the house until there is clarity on **who** is in charge and whether the court has placed any special conditions on them.
 
 ---
 
-## Step 2 â€“ Securing and evaluating the Pima County property
+## Step 2 — Securing and evaluating the Pima County property
 
 Once a personal representative is appointed, securing and evaluating the property is usually near the top of the list.
 
@@ -148,13 +148,13 @@ Common early actions:
 - Doing a basic walk-through to look for water damage, leaks, or safety problems.  
 - Making sure insurance and basic utilities are handled so the house does not deteriorate.
 
-At this stage, the focus is on **protecting the property**, not making big decisions yet. But it is also the best time to start thinking about what kind of work may be needed to get the house ready for sale, especially in Tucsonâ€™s climate.
+At this stage, the focus is on **protecting the property**, not making big decisions yet. But it is also the best time to start thinking about what kind of work may be needed to get the house ready for sale, especially in Tucson's climate.
 
 If you are out of state or very busy, this is often where I step in on the property side: walking the house, taking photos and videos, and giving the personal representative and attorney a clear picture of what they are dealing with.
 
 ---
 
-## Step 3 â€“ Notifying creditors and letting the claim period run
+## Step 3 — Notifying creditors and letting the claim period run
 
 Once the estate is open and a personal representative is appointed, Arizona law typically requires that creditors be notified and given time to file claims.
 
@@ -170,13 +170,13 @@ The house does not have to sit untouched during this time. In many cases, the pr
 
 - Cleaned out and stabilized.  
 - Evaluated for repairs.  
-- Listed and even sold, as long as it fits within the legal structure and the personal representativeâ€™s duties.
+- Listed and even sold, as long as it fits within the legal structure and the personal representative's duties.
 
 Your attorney will tell you what is allowed and what timing makes sense in your specific case.
 
 ---
 
-## Step 4 â€“ Deciding how and when to sell the house
+## Step 4 — Deciding how and when to sell the house
 
 Once the estate is open and the personal representative understands the property, the next question is **how** the house will be sold and **when** to begin.
 
@@ -186,7 +186,7 @@ Key decisions include:
 - Whether a quick sale to an investor makes sense, or a traditional sale is better.  
 - How the sale timeline fits with court dates, creditor deadlines, and family needs.
 
-In many Arizona estates, an **informal, unsupervised probate** lets the personal representative sell real estate without a separate court order as long as they act in the estateâ€™s best interest and follow any restrictions in the will or court documents.
+In many Arizona estates, an **informal, unsupervised probate** lets the personal representative sell real estate without a separate court order as long as they act in the estate's best interest and follow any restrictions in the will or court documents.
 
 In a **supervised or more closely watched probate**, the court may require that the sale of real property be confirmed or approved. That can affect timing and the structure of the purchase contract.
 
@@ -194,7 +194,7 @@ Your attorney is the one who can tell you whether you are in a supervised or uns
 
 ---
 
-## Step 5 â€“ Preparing the house for sale during probate
+## Step 5 — Preparing the house for sale during probate
 
 For most Pima County homes, there is at least some work to do before listing.
 
@@ -205,7 +205,7 @@ Typical steps:
 - Doing basic cleaning and yard work.  
 - Addressing safety issues and obvious repairs that would scare away reasonable buyers.
 
-The personal representative can use estate funds to pay for necessary expenses that help preserve or realize value, including appropriate property maintenance and sale-related costs, as long as those expenses are consistent with their duties and the estateâ€™s needs.
+The personal representative can use estate funds to pay for necessary expenses that help preserve or realize value, including appropriate property maintenance and sale-related costs, as long as those expenses are consistent with their duties and the estate's needs.
 
 In Tucson and surrounding communities, the mix is often:
 
@@ -217,9 +217,9 @@ This work usually happens while probate is open and while the creditor period is
 
 ---
 
-## Step 6 â€“ Listing the property and accepting an offer
+## Step 6 — Listing the property and accepting an offer
 
-Once everyone agrees the house is ready, the personal representative, with their attorneyâ€™s guidance, can move ahead with listing.
+Once everyone agrees the house is ready, the personal representative, with their attorney's guidance, can move ahead with listing.
 
 From the property side, this means:
 
@@ -236,11 +236,11 @@ In supervised or contested cases, your attorney may require:
 - A motion asking the court to confirm the sale.  
 - A hearing where the court reviews the offer and any objections.
 
-Those legal steps sit in your attorneyâ€™s lane. My work is to keep the buyer-side logistics, inspections, and timelines coordinated so the sale can close smoothly once it is approved.
+Those legal steps sit in your attorney's lane. My work is to keep the buyer-side logistics, inspections, and timelines coordinated so the sale can close smoothly once it is approved.
 
 ---
 
-## Step 7 â€“ Closing the sale and holding the proceeds in the estate
+## Step 7 — Closing the sale and holding the proceeds in the estate
 
 When the sale closes:
 
@@ -255,11 +255,11 @@ At this point, the **property part** is mostly done, but the probate case may st
 - Any tax filings are handled.  
 - A final accounting and plan of distribution are prepared.
 
-The house has been turned into cash, but the cash is still under the personal representativeâ€™s control and subject to the court process until the estate is ready to close.
+The house has been turned into cash, but the cash is still under the personal representative's control and subject to the court process until the estate is ready to close.
 
 ---
 
-## Step 8 â€“ Wrapping up probate and distributing proceeds
+## Step 8 — Wrapping up probate and distributing proceeds
 
 The final stages often look like:
 
@@ -281,7 +281,7 @@ Here is how my role overlaps the legal timeline:
 I help:
 
 - Document the property for the personal representative and attorney.  
-- Coordinate cleanout, donation, and vendor work under the personal representativeâ€™s authority.  
+- Coordinate cleanout, donation, and vendor work under the personal representative's authority.  
 - Prepare the home for sale in the Tucson market.  
 - List, market, and sell the property as a licensed Realtor.  
 - Keep everyone updated with simple summaries and photos.
@@ -310,7 +310,7 @@ In many straightforward, informal Arizona estates, probate often takes around si
 
 ### Can the house be sold before probate is finished?
 
-Often yes. Once there is a personal representative and there are no special restrictions from the court, the house can usually be prepared and sold while the probate is still open, as long as it is consistent with the personal representativeâ€™s duties and your attorneyâ€™s advice.
+Often yes. Once there is a personal representative and there are no special restrictions from the court, the house can usually be prepared and sold while the probate is still open, as long as it is consistent with the personal representative's duties and your attorney's advice.
 
 ### Do all sales of real estate in probate need court approval?
 

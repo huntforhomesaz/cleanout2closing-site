@@ -21,7 +21,7 @@ faq_block:
     answer: "Not necessarily. In many cases it helps to start with a simple plan for the house before or during the move, so you are not facing a full home and a major transition at the same time. We can design a timeline that matches your comfort, health, and move-in date."
     schema: true
   - question: "Does the senior need to be involved in every decision about the house?"
-    answer: "That depends on health, capacity, and family dynamics. When it is appropriate, I include the senior in calm, respectful conversations about the home. When it is not, I work with the family, attorney, or fiduciary who is responsible, while still honoring the seniorâ€™s story and wishes as much as possible."
+    answer: "That depends on health, capacity, and family dynamics. When it is appropriate, I include the senior in calm, respectful conversations about the home. When it is not, I work with the family, attorney, or fiduciary who is responsible, while still honoring the senior's story and wishes as much as possible."
     schema: true
   - question: "Can you help if our family is not in agreement about what to do with the house?"
     answer: "Yes. I cannot fix every family issue, but I can give everyone the same property facts and options in plain English. That makes it easier for families, attorneys, and fiduciaries to make decisions based on clear tradeoffs instead of guesswork."
@@ -37,7 +37,7 @@ If you are on this page, one of these is probably true:
 
 - You are a senior in Tucson thinking about a move to a smaller place or a care community.  
 - You are an adult child or family member trying to help a loved one move safely.  
-- You are already in the middle of a transition and the house is starting to feel like â€œthe other full-time job.â€
+- You are already in the middle of a transition and the house is starting to feel like "the other full-time job."
 
 Cleanout2Closing exists so you do not have to carry the property side of this alone.
 
@@ -52,15 +52,15 @@ Every family is different, but seniors and their families tend to share a few fe
 
 ### For seniors
 
-- â€œMy house is full of memories and I donâ€™t know where to start.â€  
-- â€œI want to make things easier for my family, not harder.â€  
-- â€œI am worried strangers will rush in and treat my things like trash.â€  
+- "My house is full of memories and I don't know where to start."  
+- "I want to make things easier for my family, not harder."  
+- "I am worried strangers will rush in and treat my things like trash."  
 
 ### For adult children and family
 
-- â€œI have a job, kids, and now a house full of stuff to handle.â€  
-- â€œI do not want my parent to feel pushed or disrespected.â€  
-- â€œI am scared we will get stuck and never actually finish the house.â€
+- "I have a job, kids, and now a house full of stuff to handle."  
+- "I do not want my parent to feel pushed or disrespected."  
+- "I am scared we will get stuck and never actually finish the house."
 
 Both views are real.  
 A good plan for the house respects both.
@@ -101,7 +101,7 @@ We talk about:
 - Who is involved in decisions (family, attorney, fiduciary, care team).  
 - What the senior wants most from this next chapter if they are able to share that.
 
-I do not come in with a â€œone size fits allâ€ script.  
+I do not come in with a "one size fits all" script.  
 I listen first, then we shape the property plan around the person.
 
 ### 2. Walk and document the home
@@ -163,8 +163,8 @@ Together we look at:
 
 We choose a level of prep that fits:
 
-- The seniorâ€™s comfort.  
-- The familyâ€™s capacity.  
+- The senior's comfort.  
+- The family's capacity.  
 - Your financial goals for the home.  
 
 My job is not to sell you on the biggest project.  
@@ -220,7 +220,7 @@ My focus is on the property and sale side.
 
 ## Common questions from seniors and families
 
-### â€œDo we have to move everything out before we talk to you?â€
+### "Do we have to move everything out before we talk to you?"
 
 No.
 
@@ -233,7 +233,7 @@ That way we can plan:
 
 You do not need everything sorted into boxes before we talk.
 
-### â€œWhat if my parent or loved one is not ready to move yet?â€
+### "What if my parent or loved one is not ready to move yet?"
 
 We can still:
 
@@ -243,7 +243,7 @@ We can still:
 
 You do not have to wait for a crisis or a firm move-in date to start getting organized.
 
-### â€œWhat if we do not all agree on what should happen with the house?â€
+### "What if we do not all agree on what should happen with the house?"
 
 That is very common.
 

@@ -1,0 +1,136 @@
+{
+  "$ref": "#/definitions/guides",
+  "definitions": {
+    "guides": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "updated": {
+          "type": "string"
+        },
+        "page_type": {
+          "type": "string",
+          "enum": [
+            "home",
+            "service_pillar",
+            "geo_service",
+            "geo_hub",
+            "guide",
+            "contact",
+            "about",
+            "persona",
+            "faqs",
+            "reviews",
+            "services"
+          ]
+        },
+        "template": {
+          "type": "string",
+          "enum": [
+            "home",
+            "service_pillar",
+            "geo_service",
+            "geo_hub",
+            "guide",
+            "contact",
+            "about",
+            "persona",
+            "faq",
+            "reviews",
+            "services"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "main_entity": {
+          "type": "string"
+        },
+        "canonical_url": {
+          "type": "string"
+        },
+        "hero_image": {
+          "type": "string"
+        },
+        "noindex": {
+          "type": "boolean",
+          "default": false
+        },
+        "faq_block": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string"
+              },
+              "answer": {
+                "type": "string"
+              },
+              "audience": {
+                "type": "string"
+              },
+              "schema": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "question",
+              "answer"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "geo": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "metro": {
+              "type": "string"
+            },
+            "region": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "slug",
+        "date",
+        "updated",
+        "page_type",
+        "template",
+        "tags",
+        "main_entity",
+        "canonical_url"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

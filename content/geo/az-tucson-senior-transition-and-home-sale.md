@@ -121,13 +121,13 @@ Because of that, the house usually needs a combination of:
 - Sensitive sorting of belongings.  
 - Donation, estate sale, and haul away for what is not kept.  
 - Cleaning, yard work, and realistic repairs.  
-- A sale strategy that fits both the market and your familyâ€™s timeline.
+- A sale strategy that fits both the market and your family's timeline.
 
 My role is to coordinate the property side in a way that respects your parent and keeps the move front and center.
 
 ---
 
-## Step 1 â€“ Clarify the move and who is involved
+## Step 1 — Clarify the move and who is involved
 
 We start with a simple conversation.
 
@@ -141,7 +141,7 @@ If there are attorneys, financial advisors, or care professionals involved, I st
 
 ---
 
-## Step 2 â€“ Understand the property and belongings
+## Step 2 — Understand the property and belongings
 
 Next, we get a clear picture of the home and its contents.
 
@@ -159,7 +159,7 @@ The goal is not to rush decisions. It is to see the whole picture so we can plan
 
 ---
 
-## Step 3 â€“ Build a plan that respects the move
+## Step 3 — Build a plan that respects the move
 
 Senior transitions are about more than the house. They are about the person.
 
@@ -180,7 +180,7 @@ I help you sequence property tasks so the move stays the priority, not the other
 
 ---
 
-## Step 4 â€“ Coordinate vendors for sorting, cleanout, and preparation
+## Step 4 — Coordinate vendors for sorting, cleanout, and preparation
 
 Once we have a plan, I coordinate the right vendors.
 
@@ -197,7 +197,7 @@ I do not run a moving crew or junk removal company myself. I coordinate speciali
 
 ---
 
-## Step 5 â€“ Choose a sale strategy that fits your parent and your family
+## Step 5 — Choose a sale strategy that fits your parent and your family
 
 Once we know what the house will look like, we talk about options.
 
@@ -214,12 +214,12 @@ When you are ready, I:
 
 - Prepare the home for photos and showings.  
 - List the property in the Tucson market.  
-- Manage showings with sensitivity to your parentâ€™s schedule or privacy.  
+- Manage showings with sensitivity to your parent's schedule or privacy.  
 - Handle offers and negotiations on your behalf.  
 
 ---
 
-## Step 6 â€“ Keep everyone updated through escrow
+## Step 6 — Keep everyone updated through escrow
 
 Once you accept an offer, I handle the property side of escrow.
 

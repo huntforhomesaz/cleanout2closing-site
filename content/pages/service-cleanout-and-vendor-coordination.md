@@ -53,7 +53,7 @@ I coordinate cleanout and vendors in Tucson as part of a clear plan that leads t
 
 This cleanout and vendor coordination service is for you if:
 
-- The property needs more than â€œa quick sweepâ€ before it can be shown.  
+- The property needs more than "a quick sweep" before it can be shown.  
 - You do not have time, health, or energy to manage a series of heavy jobs.  
 - You are overwhelmed by where to start or which vendors to call.  
 - You want one accountable point of contact who understands both cleanout and real estate.  
@@ -88,7 +88,7 @@ I coordinate vendors around a clear plan, so you have one point of contact inste
 
 - Worry about over-improving for the neighborhood.  
 - Fear of under-prepping and leaving money on the table.  
-- No clear way to compare â€œdo nothing,â€ â€œdo a little,â€ and â€œdo moreâ€ options.
+- No clear way to compare "do nothing," "do a little," and "do more" options.
 
 I bring a real estate lens to vendor decisions, so you are not paying for work that buyers will not value in your part of Tucson.
 
@@ -105,9 +105,9 @@ I keep the property side organized so your legal and financial advisors can plug
 ## How cleanout and vendor coordination works
 
 Every property is different, but the structure can stay simple.  
-Here is how I usually move from â€œwe need a lot of workâ€ to â€œthe home is ready for buyers.â€
+Here is how I usually move from "we need a lot of work" to "the home is ready for buyers."
 
-### Step 1 â€“ Walk and map the property
+### Step 1 — Walk and map the property
 
 We start with a property walkthrough.
 
@@ -125,7 +125,7 @@ I then outline:
 
 This becomes the base map for everything we do next.
 
-### Step 2 â€“ Build a simple, written cleanout plan
+### Step 2 — Build a simple, written cleanout plan
 
 From the walkthrough, I create a straightforward plan that covers:
 
@@ -136,7 +136,7 @@ From the walkthrough, I create a straightforward plan that covers:
 
 You can review this plan with family, an attorney, a fiduciary, or a trusted advisor before we move ahead.
 
-### Step 3 â€“ Gather and compare vendor estimates
+### Step 3 — Gather and compare vendor estimates
 
 Next, I line up estimates from independent vendors.
 
@@ -153,7 +153,7 @@ You see estimates directly.
 We talk through pros, cons, scope, and timing in plain language.  
 You decide what to approve.
 
-### Step 4 â€“ Coordinate schedules, access, and oversight
+### Step 4 — Coordinate schedules, access, and oversight
 
 Once you approve the work, I coordinate:
 
@@ -164,7 +164,7 @@ Once you approve the work, I coordinate:
 You avoid constant back-and-forth calls.  
 Instead, you receive simple updates and clear questions when real decisions are needed.
 
-### Step 5 â€“ Align vendor work with your sale strategy
+### Step 5 — Align vendor work with your sale strategy
 
 Cleanout and prep only make sense in context.
 
@@ -182,7 +182,7 @@ We might decide:
 
 I keep vendor scopes tethered to your real goals instead of chasing perfection.
 
-### Step 6 â€“ Move from â€œproject modeâ€ to â€œready to listâ€
+### Step 6 — Move from "project mode" to "ready to list"
 
 When cleanout and vendor work are complete:
 
@@ -211,7 +211,7 @@ In those cases:
 - I coordinate vendors and cleanout according to that guidance.  
 - We document work and move toward a sale in a way that makes sense for everyone.
 
-You are not hiring â€œjust a cleanout companyâ€ or â€œjust a Realtor.â€  
+You are not hiring "just a cleanout company" or "just a Realtor."  
 You are working with someone who understands how the dirty, practical work and the legal, financial side intersect.
 
 ---
@@ -270,7 +270,7 @@ Yes.
 We can start with:
 
 - A walkthrough and documentation.  
-- A plan that separates â€œkeep,â€ â€œdonate,â€ â€œsell,â€ and â€œdiscard.â€  
+- A plan that separates "keep," "donate," "sell," and "discard."  
 - Gentle pacing that respects family needs, especially around grief or senior moves.
 
 You stay in control of what happens to belongings.

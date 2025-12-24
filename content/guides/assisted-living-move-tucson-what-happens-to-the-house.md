@@ -118,7 +118,7 @@ If your situation is more about an inherited house after a parent has passed, th
 
 ---
 
-## Step 1 â€“ Separate the care decision from the house decision
+## Step 1 — Separate the care decision from the house decision
 
 The most important choice is where your parent will live and what level of care they need.
 
@@ -138,7 +138,7 @@ I do not choose communities or give medical advice. I work alongside the plan yo
 
 ---
 
-## Step 2 â€“ Stabilize the Tucson property
+## Step 2 — Stabilize the Tucson property
 
 While the move is being planned, it helps to make sure the house is not quietly becoming a problem.
 
@@ -160,7 +160,7 @@ If you are out of state or busy with the care side, I can perform this walk thro
 
 ---
 
-## Step 3 â€“ Decide the most likely path: keep, rent, or sell
+## Step 3 — Decide the most likely path: keep, rent, or sell
 
 You may not have a final answer right away, but having a likely direction for the house makes every other choice easier.
 
@@ -188,7 +188,7 @@ Your attorney, financial advisor, or care team can then help connect those numbe
 
 ---
 
-## Step 4 â€“ Plan belongings, keepsakes, and cleanout
+## Step 4 — Plan belongings, keepsakes, and cleanout
 
 For most senior moves, the hardest part is not the walls. It is what is inside.
 
@@ -215,7 +215,7 @@ I coordinate and oversee these vendors so you are not trying to manage them all 
 
 ---
 
-## Step 5 â€“ Choose a property plan that respects the move
+## Step 5 — Choose a property plan that respects the move
 
 Senior transitions are about the person, not just the house. A property plan that ignores that will feel wrong, even if the numbers look good.
 
@@ -250,7 +250,7 @@ For a deeper look at the service model behind this, you can also read:
 
 ---
 
-## Step 6 â€“ If you decide to sell, what it looks like in Tucson
+## Step 6 — If you decide to sell, what it looks like in Tucson
 
 If you decide the house should be sold, the steps usually look like this:
 
@@ -264,7 +264,7 @@ If you decide the house should be sold, the steps usually look like this:
 
 3. List the property.  
    - Professional photos and clear description, including any senior transition context that matters.  
-   - Showings timed to respect your parentâ€™s privacy if they are still living in the home.
+   - Showings timed to respect your parent's privacy if they are still living in the home.
 
 4. Review offers and choose a path.  
    - Compare net proceeds and timelines.  
@@ -283,7 +283,7 @@ I handle the property and sale logistics as a licensed Realtor. Your attorney or
 
 A few local realities worth keeping in mind:
 
-- Tucson has an above average share of retirees compared to past decades, and Arizonaâ€™s senior population is projected to keep growing, which supports ongoing demand for senior housing and for homes that seniors leave behind. :contentReference[oaicite:2]{index=2}  
+- Tucson has an above average share of retirees compared to past decades, and Arizona's senior population is projected to keep growing, which supports ongoing demand for senior housing and for homes that seniors leave behind. :contentReference[oaicite:2]{index=2}  
 - Senior living communities across the country have been filling back in after the pandemic, with occupancy now above 80 percent in many markets, so it is common to see more families making these moves at the same time. :contentReference[oaicite:3]{index=3}  
 - Heat, roof condition, and yard care matter more in Southern Arizona than in some other places. Leaving a house empty and unattended here for long periods can cause preventable damage.
 
@@ -295,7 +295,7 @@ All of this is a long way of saying: you are not alone in facing this decision, 
 
 I do:
 
-- Help you see options for the house in Tucson in the context of your parentâ€™s move.  
+- Help you see options for the house in Tucson in the context of your parent's move.  
 - Walk and document the property with photos and simple summaries.  
 - Coordinate cleanout, donation, movers, and basic vendors.  
 - Guide pricing and sale strategy in the Tucson market.  
@@ -349,4 +349,4 @@ You can:
 - Tell me about the house and any concerns you see.  
 - Ask for a simple, step by step plan that puts the move first and the house in its proper place.
 
-When you are ready, reach out through the [/contact](/contact) page and tell me what you are facing. I will follow up and help you connect your parentâ€™s care plan with a realistic, respectful plan for the home.
+When you are ready, reach out through the [/contact](/contact) page and tell me what you are facing. I will follow up and help you connect your parent's care plan with a realistic, respectful plan for the home.

@@ -103,7 +103,7 @@ If you already know the property is in or near Tucson, you can jump straight to 
 
 ---
 
-## Step 1 â€“ Understand how Cleanout2Closing fits in Arizona
+## Step 1 — Understand how Cleanout2Closing fits in Arizona
 
 Cleanout2Closing is built around a simple idea: most estate properties need a blend of on-the-ground coordination and a thoughtful sale, not just a sign in the yard.
 
@@ -124,7 +124,7 @@ The reason I start in Tucson is simple. It is where I can promise that level of 
 
 ---
 
-## Step 2 â€“ Where I currently help families in Arizona
+## Step 2 — Where I currently help families in Arizona
 
 Right now, my active service area looks like this:
 
@@ -148,7 +148,7 @@ Those pages go deeper into what I handle on the ground in Southern Arizona.
 
 ---
 
-## Step 3 â€“ If your property is in Arizona but not near Tucson
+## Step 3 — If your property is in Arizona but not near Tucson
 
 There are situations where the property is elsewhere in Arizona, but my approach is still useful.
 
@@ -174,7 +174,7 @@ You do not have to guess alone, even if we decide I am not the best fit to take 
 
 ---
 
-## Step 4 â€“ How the Arizona hub, Tucson hub, and service pages work together
+## Step 4 — How the Arizona hub, Tucson hub, and service pages work together
 
 The site is set up so that you can move from the big picture down into the details you need:
 
@@ -193,7 +193,7 @@ This layered structure keeps things simple for you while also making it clear to
 
 ---
 
-## Step 5 â€“ A quick note about legal, tax, and labor boundaries
+## Step 5 — A quick note about legal, tax, and labor boundaries
 
 Because this page speaks to Arizona as a whole, it is important to be clear about what I do and do not do.
 

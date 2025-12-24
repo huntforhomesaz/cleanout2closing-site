@@ -38,7 +38,7 @@ If you are on this page, you probably live in one of these worlds:
 
 - You are a Realtor with clients facing an inherited, trust, or senior transition property.  
 - You are an attorney or licensed fiduciary who needs the property side handled and documented well.  
-- You are part of a senior community, care team, or lending group that sees families struggle with â€œwhat do we do with the house?â€
+- You are part of a senior community, care team, or lending group that sees families struggle with "what do we do with the house?"
 
 Cleanout2Closing is the consumer-facing brand I use when I step into those situations as a Realtor-led estate transition concierge.
 
@@ -62,7 +62,7 @@ My role in each case is similar:
 
 - You handle your core expertise: law, fiduciary duties, lending, care, or primary agency.  
 - I handle the property: cleanout, vendor coordination, and the sale as a licensed Tucson Realtor.  
-- Together, we give the client a calm, coordinated path from â€œoverwhelmed houseâ€ to â€œclosed file.â€
+- Together, we give the client a calm, coordinated path from "overwhelmed house" to "closed file."
 
 Cleanout2Closing is the brand families see.  
 AZ Probate Concierge is the brand you may see on professional materials, documentation, and LinkedIn.  
@@ -70,22 +70,22 @@ Both roll up to me and to the same process.
 
 ---
 
-## How this is different from â€œjust another Realtorâ€ or â€œjust a cleanout companyâ€
+## How this is different from "just another Realtor" or "just a cleanout company"
 
-I am not a labor crew and I am not a nameless â€œwe buy houses for cashâ€ postcard.
+I am not a labor crew and I am not a nameless "we buy houses for cash" postcard.
 
 Here is the practical distinction.
 
-### Typical path 1 â€“ Traditional Realtor only
+### Typical path 1 — Traditional Realtor only
 
 - Strong on pricing, marketing, escrow, and negotiation.  
 - Less involved in vendor sequencing and heavy cleanout.  
-- Clients end up juggling 3â€“5 companies before the home is even ready to list.
+- Clients end up juggling 3–5 companies before the home is even ready to list.
 
 This works fine when a home is already empty and lightly prepped.  
 It breaks down when there is a full house, complex timing, or legal constraints.
 
-### Typical path 2 â€“ Cleanout company + separate Realtor
+### Typical path 2 — Cleanout company + separate Realtor
 
 - Crews handle hauling and maybe some light demo.  
 - They are not focused on the eventual buyer, disclosures, or negotiation.  
@@ -93,7 +93,7 @@ It breaks down when there is a full house, complex timing, or legal constraints.
 
 This is better than nothing, but you still have two separate tracks to manage.
 
-### The path I offer â€“ Realtor-led coordination from day one
+### The path I offer — Realtor-led coordination from day one
 
 I combine:
 
@@ -126,7 +126,7 @@ You keep that.
 In those situations, I can:
 
 - Step in as a property-side coordinator under your umbrella, focused on cleanout and vendor sequencing.  
-- Help your client build a plan from â€œas-isâ€ to â€œready to listâ€ that supports your pricing and marketing strategy.  
+- Help your client build a plan from "as-is" to "ready to list" that supports your pricing and marketing strategy.  
 - Coordinate cleanout, basic repairs, and access with your branding front and center.
 
 Your client sees that you have brought in someone who knows how to manage the heavy lifting without turning it into a separate relationship.
@@ -137,7 +137,7 @@ If we work this way, we are clear and transparent about roles and agreements up 
 
 In other cases, you may:
 
-- Get a call from a past clientâ€™s family who moved out of area.  
+- Get a call from a past client's family who moved out of area.  
 - Be outside Tucson but need a local partner to handle a complicated estate property.  
 - Decide that your own bandwidth is better spent on your core farm or niche.
 
@@ -172,7 +172,7 @@ When you introduce me into a matter, you can expect:
 Specifically, on the property side I can:
 
 - Walk and document the home with photos and simple written summaries.  
-- Gather and organize vendor estimates for your review and your clientâ€™s approval.  
+- Gather and organize vendor estimates for your review and your client's approval.  
 - Coordinate work once authorized and keep receipts and invoices in order.  
 - Represent the estate or trust as a Realtor for pricing, listing, and negotiation.
 
@@ -210,8 +210,8 @@ I coordinate the property, vendors, and eventual sale in a way that supports the
 
 Professionally, I operate under two connected brands:
 
-- Cleanout2Closing â€“ the consumer-facing estate transition brand.  
-- AZ Probate Concierge â€“ the professional-facing brand built for attorneys, fiduciaries, and other pros.
+- Cleanout2Closing — the consumer-facing estate transition brand.  
+- AZ Probate Concierge — the professional-facing brand built for attorneys, fiduciaries, and other pros.
 
 On the ground, the process is the same:
 
@@ -237,7 +237,7 @@ Your clients, however, may meet me first under the Cleanout2Closing name, becaus
 When you connect a client, heir, or family to me, they can expect:
 
 - One steady point of contact for the property and sale.  
-- A clear conversation about their situation and what â€œsuccessâ€ looks like.  
+- A clear conversation about their situation and what "success" looks like.  
 - A walkthrough and simple explanation of what the home needs (and what it does not).  
 - A written plan from today to closing that they can share with you.  
 - Vendor coordination that does not leave them managing every call and schedule.  
@@ -329,7 +329,7 @@ You can introduce me in whatever way fits your relationship:
 
 - A warm email introducing me by name and copying your client.  
 - A brief three-way call to align expectations and next steps.  
-- A simple, â€œWe have a property-side specialist I trust; would you like an introduction?â€ in your regular meetings.
+- A simple, "We have a property-side specialist I trust; would you like an introduction?" in your regular meetings.
 
 From there, I:
 

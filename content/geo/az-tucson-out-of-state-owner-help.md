@@ -56,7 +56,7 @@ I help out-of-state owners coordinate the cleanout, vendors, and sale of Tucson 
 This page is for you if:
 
 - You live outside Southern Arizona but are responsible for a house in or around Tucson.  
-- You are the heir, trustee, personal representative, or family â€œpoint personâ€ for a Tucson property.  
+- You are the heir, trustee, personal representative, or family "point person" for a Tucson property.  
 - A parent or relative has moved or passed away and the Tucson house is still full.  
 - You need the house handled but cannot keep flying in to meet vendors or agents.  
 
@@ -70,7 +70,7 @@ Tucson has its own mix of challenges for remote owners:
 
 - Homes may sit vacant in heat and monsoon season, which can expose roof, plumbing, or landscaping issues faster than in cooler climates.  
 - Many properties are in HOAs with rules about weeds, trash, parking, and vacant homes. Notices often arrive by mail that you may not see quickly.  
-- â€œSnowbirdâ€ patterns mean some neighborhoods are quiet part of the year, which can be good for privacy but tricky for keeping an eye on the property.  
+- "Snowbird" patterns mean some neighborhoods are quiet part of the year, which can be good for privacy but tricky for keeping an eye on the property.  
 - Estate sale, junk removal, and cleanout vendors all have their own schedules and paperwork, and they are not responsible for the final sale of the house.  
 
 Trying to juggle this from across the country, while also working with an attorney or fiduciary, can leave you stuck in the middle.
@@ -85,7 +85,7 @@ My role is to be your local, Realtor-led estate transition concierge for Tucson.
 
 I coordinate and oversee:
 
-- Walkthroughs to document the propertyâ€™s current condition for you and your attorney or fiduciary.  
+- Walkthroughs to document the property's current condition for you and your attorney or fiduciary.  
 - Photo or video tours so you can see the house and contents without booking a flight.  
 - Simple sorting plans for contents: what to keep, ship, donate, sell, or discard.  
 - Vendor bids for estate cleanout, donation pickup, basic repairs, yard work, and simple safety items.  
@@ -195,7 +195,7 @@ I step in to:
 
 - Document the house and contents for the family and attorney.  
 - Coordinate cleanout, donation, and basic repairs with local vendors.  
-- Bring the home to market with a plan that matches the familyâ€™s goals and the propertyâ€™s condition.  
+- Bring the home to market with a plan that matches the family's goals and the property's condition.  
 - Keep everyone updated without asking them to manage every call, email, or invoice.
 
 The result is a clean, secure property, a clear sale path, and fewer last-minute surprises for people who are already carrying a lot.

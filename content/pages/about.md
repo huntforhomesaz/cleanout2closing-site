@@ -54,8 +54,8 @@ A few basics first:
 
 In plain terms, I have spent years:
 
-- In peopleâ€™s homes and yards, helping them through stressful projects.  
-- Around heavy cleanouts, repairs, and â€œwe do not know where to startâ€ situations.  
+- In people's homes and yards, helping them through stressful projects.  
+- Around heavy cleanouts, repairs, and "we do not know where to start" situations.  
 - Inside organizations where trust, documentation, and clear communication matter.
 
 Cleanout2Closing is the way I bring all of that together for families and professionals dealing with estate and transition properties in Tucson.
@@ -79,7 +79,7 @@ In inherited, probate, and senior-transition cases, that gap shows up as:
 Cleanout2Closing exists to close that gap.
 
 The goal is not fancy branding.  
-The goal is a steady, practical process that takes the property from â€œwe do not know where to startâ€ to â€œwe are closed and the records are in order.â€
+The goal is a steady, practical process that takes the property from "we do not know where to start" to "we are closed and the records are in order."
 
 ---
 
@@ -101,9 +101,9 @@ I understand how long things actually take and what it really takes to get a pro
 
 As a Realtor on The Stratton Group team at Keller Williams Southern Arizona:
 
-- I work inside one of Tucsonâ€™s top-performing real estate teams.  
+- I work inside one of Tucson's top-performing real estate teams.  
 - I have access to current data on how different properties perform in different areas and conditions.  
-- I see every week how buyers respond to â€œas-is,â€ â€œlightly prepped,â€ and â€œfully polishedâ€ homes.
+- I see every week how buyers respond to "as-is," "lightly prepped," and "fully polished" homes.
 
 This helps you:
 
@@ -146,8 +146,8 @@ You can see the details on the [How it works](/how-it-works) and [Services](/ser
 
 You may see both names:
 
-- Cleanout2Closing â€“ consumer-facing, focused on families, heirs, seniors, and trustees.  
-- AZ Probate Concierge â€“ professional-facing, built for attorneys, fiduciaries, and other pros.
+- Cleanout2Closing — consumer-facing, focused on families, heirs, seniors, and trustees.  
+- AZ Probate Concierge — professional-facing, built for attorneys, fiduciaries, and other pros.
 
 They are two doorways into the same service.
 

@@ -138,7 +138,7 @@ For families moving a Green Valley resident into higher-level care or a smaller 
 - Plans that put the care decision first and fit property steps around it  
 - Contents planning: what moves, what stays in the family, what is donated or sold  
 - Coordination of move managers, movers, cleanout, and basic vendor work  
-- Sale strategies that respect your parentâ€™s energy and privacy
+- Sale strategies that respect your parent's energy and privacy
 
 See also:
 
@@ -185,7 +185,7 @@ The steps look similar across most Green Valley cases:
 
 4. **Prepare, list, and sell**  
    - Right-sized prep (usually clean, safe, and honest rather than a full remodel)  
-   - Pricing and listing strategy tuned to Green Valleyâ€™s 55+ buyer base  
+   - Pricing and listing strategy tuned to Green Valley's 55+ buyer base  
    - Offer review, negotiation, and escrow coordination
 
 Throughout, you get one accountable point of contact on the property side, and your attorney or fiduciary stays in charge of the legal and accounting file.
@@ -216,7 +216,7 @@ And will have its own focused service pages, starting with:
 
 ## Next step if you are dealing with a Green Valley property
 
-If you are staring at a Green Valley home and wondering how to get from â€œas it sits todayâ€ to â€œsold and documented,â€ you do not have to map it alone.
+If you are staring at a Green Valley home and wondering how to get from "as it sits today" to "sold and documented," you do not have to map it alone.
 
 From here, you can:
 

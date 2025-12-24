@@ -26,7 +26,7 @@ service_focus: "senior-and-estate-home-sale"
 faq_block:
   - question: "Is Green Valley really mostly retirees?"
     answer: >
-      Yes. Recent data show that around 79â€“80% of Green Valley residents are
+      Yes. Recent data show that around 79–80% of Green Valley residents are
       65 or older, with a median age in the low 70s, and many neighborhoods are
       55+ age-restricted communities. That makes senior moves and estate-related
       sales especially common here.
@@ -63,7 +63,7 @@ noindex: false
 
 # Senior transition and estate home sale in Green Valley, AZ
 
-Green Valley is one of Arizonaâ€™s most retirement-focused communities.  
+Green Valley is one of Arizona's most retirement-focused communities.  
 Roughly 80% of residents are 65 or older, and the median age sits in the low 70s.   
 
 Most neighborhoods were built as active-adult or 55+ communities, with HOAs that require at least one occupant to be 55+ and no permanent residents under 18.   
@@ -74,7 +74,7 @@ That means a large share of Green Valley home sales are tied to:
 - Estates, trusts, and inherited property  
 - Out-of-state owners and snowbirds ready to sell
 
-This page explains how I help Green Valley families and out-of-state owners move from â€œfull house and big decisionâ€ to â€œdocumented sale and clear file,â€ without you needing to babysit every vendor or trip to the property.
+This page explains how I help Green Valley families and out-of-state owners move from "full house and big decision" to "documented sale and clear file," without you needing to babysit every vendor or trip to the property.
 
 ---
 
@@ -99,7 +99,7 @@ A few facts shape how we design your plan:
 
 - Around 79.8% of residents are 65+ and the median age is about 73.   
 - Nearly all housing is aimed at retirees and active adults, with many 55+ HOAs and age-restricted communities.   
-- Green Valley is unincorporated Pima County, about 25â€“30 miles south of Tucson, so most legal, medical, and some vendor resources are tied into the Tucson metro.   
+- Green Valley is unincorporated Pima County, about 25–30 miles south of Tucson, so most legal, medical, and some vendor resources are tied into the Tucson metro.   
 
 For you, that usually means:
 
@@ -150,17 +150,17 @@ For more depth on the care side of this, you can also read:
 
 ## How the Green Valley process works
 
-### Step 1 â€“ Clarify roles, goals, and timelines
+### Step 1 — Clarify roles, goals, and timelines
 
 We start by answering three simple questions:
 
 1. Who is legally in charge of the property (owner, PR, trustee, fiduciary).  
 2. Is an attorney, care manager, or other professional already involved.  
-3. What â€œsuccessâ€ looks like for you (free up funds, protect family relationships, reduce workload, or all three).
+3. What "success" looks like for you (free up funds, protect family relationships, reduce workload, or all three).
 
 Once that is clear, I coordinate with your attorney or fiduciary so there is one property plan instead of three competing ones.
 
-### Step 2 â€“ Walkthrough and documentation
+### Step 2 — Walkthrough and documentation
 
 I walk the property in Green Valley and:
 
@@ -170,7 +170,7 @@ I walk the property in Green Valley and:
 
 You and your professionals see the same visuals without needing to get on a plane.
 
-### Step 3 â€“ Contents and vendor plan
+### Step 3 — Contents and vendor plan
 
 For both estates and senior moves, contents are usually the hardest piece.
 
@@ -178,12 +178,12 @@ We build a simple plan:
 
 - What must be saved (documents, photos, keepsakes).  
 - What may be shipped to family versus donated locally.  
-- Whether an estate sale or buyout makes sense in Green Valleyâ€™s market.  
+- Whether an estate sale or buyout makes sense in Green Valley's market.  
 - Which vendors will handle cleanout, donation, yard work, cleaning, and basic repairs.
 
 I gather estimates, help compare options, and then schedule work once you or your fiduciary approve. Vendors are paid directly by you or the estate; I do not hold funds.
 
-### Step 4 â€“ Prepare, price, and list the home
+### Step 4 — Prepare, price, and list the home
 
 Once the contents plan is in motion, we decide how far to go with prep.
 
@@ -199,7 +199,7 @@ We then:
 - Choose a pricing range that reflects condition, location, and your goals.  
 - List the home on the MLS and manage showings with an eye on neighbor relations and HOA rules.
 
-### Step 5 â€“ Offers, negotiation, and escrow
+### Step 5 — Offers, negotiation, and escrow
 
 When offers come in:
 
@@ -254,7 +254,7 @@ For related services, you can also look at:
 
 ## Next step if you are dealing with a Green Valley home
 
-If you are looking at a Green Valley house and wondering how to get from â€œas it sits nowâ€ to â€œsold and documented,â€ you do not have to figure it out alone.
+If you are looking at a Green Valley house and wondering how to get from "as it sits now" to "sold and documented," you do not have to figure it out alone.
 
 From here, you can:
 

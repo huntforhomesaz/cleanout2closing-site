@@ -47,7 +47,7 @@ If you do not see your question here, that is okay. You can always ask it on the
 
 Cleanout2Closing is a Realtor-led estate transition concierge service based in Tucson.
 
-I help families, trustees, and professionals move a property from â€œfull and overwhelmingâ€ to â€œclean, documented, and sold.â€  
+I help families, trustees, and professionals move a property from "full and overwhelming" to "clean, documented, and sold."  
 That includes coordinating cleanout, vendors, and the real estate sale itself so you are not juggling multiple companies.
 
 ### Are you a junk removal company, a moving company, or something else?
@@ -65,7 +65,7 @@ Vendors set their own pricing and contracts. You review and approve their estima
 
 ### Are you a cash buyer?
 
-No. I am not a â€œwe buy houses for cashâ€ company.
+No. I am not a "we buy houses for cash" company.
 
 I am a licensed Realtor in Tucson.  
 My role is to coordinate the property side and help you choose the right way to sell, which may include:
@@ -103,7 +103,7 @@ Cleanout2Closing is a good fit if:
 
 It is less of a fit if you want:
 
-- A pure â€œcash for housesâ€ approach with no planning or vendor coordination.  
+- A pure "cash for houses" approach with no planning or vendor coordination.  
 - A simple, non-estate sale where the property is already empty and straightforward.  
 - A do-it-yourself approach where you prefer to call and manage every vendor personally.
 

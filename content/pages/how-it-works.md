@@ -62,7 +62,7 @@ If you are unsure whether your situation fits, you can still reach out. A quick 
 
 ## Situations I handle all the time
 
-These are the kinds of transitions where a â€œcleanout to closingâ€ approach helps most:
+These are the kinds of transitions where a "cleanout to closing" approach helps most:
 
 - Probate property where the court sets the pace and you need to keep the property side moving in step.
 - Inherited homes that are still full and feel emotionally heavy to tackle.
@@ -79,7 +79,7 @@ If your situation is close to any of these, the same basic process applies.
 
 Every family and every property is different, but the structure stays the same. Here is the step by step journey.
 
-### Step 1 â€“ Talk through your situation and timelines
+### Step 1 — Talk through your situation and timelines
 
 We start with a simple call.
 
@@ -92,7 +92,7 @@ I ask about:
 
 There is no cost and no pressure. The goal is to understand what you are carrying and whether I am the right fit.
 
-### Step 2 â€“ Walk the property
+### Step 2 — Walk the property
 
 Next, I walk the property with you or on your behalf.
 
@@ -110,7 +110,7 @@ During the walkthrough I look at:
 
 This gives us a clear, shared picture of what the property needs before it can be sold.
 
-### Step 3 â€“ Build a simple, written plan
+### Step 3 — Build a simple, written plan
 
 After the walkthrough, I put together a straightforward plan that connects cleanout, vendors, and the sale.
 
@@ -124,7 +124,7 @@ This usually includes:
 
 For many families this is the first time the entire journey is laid out in one place.
 
-### Step 4 â€“ Line up the right vendors
+### Step 4 — Line up the right vendors
 
 Once you are comfortable with the plan, I start lining up vendors based on what the property needs.
 
@@ -137,7 +137,7 @@ Examples include:
 
 I request estimates, help you compare options, and organize schedules. You approve work before it is booked. Vendors are independent businesses with their own pricing and contracts, and I keep their work aligned with the overall plan.
 
-### Step 5 â€“ Coordinate cleanout and prep around your timelines
+### Step 5 — Coordinate cleanout and prep around your timelines
 
 As work begins, I stay close to three things:
 
@@ -153,7 +153,7 @@ I coordinate:
 
 You do not have to manage a pile of separate calls and texts. You hear from me with updates and decisions, not from every vendor individually unless you want that.
 
-### Step 6 â€“ List, sell, and close the property
+### Step 6 — List, sell, and close the property
 
 When the home is ready, I move into the real estate side as your Tucson Realtor.
 
@@ -166,7 +166,7 @@ This includes:
 - Managing the property side of inspections, access, and repairs during escrow.
 - Staying with you through closing and making sure you have the property related documentation you need.
 
-The goal is one coordinated journey rather than separate â€œcleanout,â€ â€œvendor,â€ and â€œsaleâ€ projects you have to connect yourself.
+The goal is one coordinated journey rather than separate "cleanout," "vendor," and "sale" projects you have to connect yourself.
 
 ---
 

@@ -106,7 +106,7 @@ I act as a neutral property side coordinator, share clear updates, and keep ever
 Every family is different, but the structure can stay simple.  
 Here is how we usually move from first call to sold home.
 
-### Step 1 â€“ Listen to the story and the plan for the person
+### Step 1 — Listen to the story and the plan for the person
 
 We start with a conversation, often including the senior if they are comfortable and able.
 
@@ -120,7 +120,7 @@ We talk about:
 
 The goal is to respect the person first, then build the property plan around that.
 
-### Step 2 â€“ Walk and document the home
+### Step 2 — Walk and document the home
 
 Next, I walk the property.  
 If the senior or family is available, we can do this together. If not, I can walk the home and share photos and video.
@@ -135,7 +135,7 @@ I look at:
 We do not decide everything in one visit.  
 We simply get a clear, honest picture of what the home needs.
 
-### Step 3 â€“ Build a gentle, realistic plan
+### Step 3 — Build a gentle, realistic plan
 
 From there, I build a simple written plan that ties together:
 
@@ -148,12 +148,12 @@ From there, I build a simple written plan that ties together:
 The plan is designed to be:
 
 - Gentle enough for the senior.  
-- Realistic for the familyâ€™s time and energy.  
+- Realistic for the family's time and energy.  
 - Strong enough to move the property toward a successful sale.
 
 We adjust it together as life happens.
 
-### Step 4 â€“ Line up the right vendors in the right order
+### Step 4 — Line up the right vendors in the right order
 
 With your approval, I begin scheduling vendors.
 
@@ -168,9 +168,9 @@ This might include:
 Vendors provide their own estimates and contracts.  
 You review and approve those estimates before work is scheduled.
 
-I manage timing, access, and oversight so the work stays aligned with the plan and with the seniorâ€™s comfort.
+I manage timing, access, and oversight so the work stays aligned with the plan and with the senior's comfort.
 
-### Step 5 â€“ Prepare the home at the right level
+### Step 5 — Prepare the home at the right level
 
 Not every senior home needs a full renovation to sell well.
 
@@ -188,7 +188,7 @@ We look at:
 
 My job is to help you see the tradeoffs and choose the path that fits your goals, not to push you into a project that does not feel right.
 
-### Step 6 â€“ List, sell, and close the home
+### Step 6 — List, sell, and close the home
 
 When the home is ready, I move into the real estate side as your Tucson Realtor.
 

@@ -109,7 +109,7 @@ If you want more detail on each step, you can read the full process on the [How 
 
 ## Who I help
 
-Cleanout2Closing is built for people who need more than â€œjust list the house.â€
+Cleanout2Closing is built for people who need more than "just list the house."
 
 I most often help:
 
@@ -134,7 +134,7 @@ Cleanout2Closing is led by me, Bradley Hunt.
 - Former owner of Grunt-Work LLC, a successful cleanout and demolition company
 
 This mix of experience means I understand both the real estate side and the practical realities of vendors, equipment, and timelines.  
-I know what it takes to get a property from â€œoverwhelmingâ€ to â€œready for the marketâ€ without burning out the family.
+I know what it takes to get a property from "overwhelming" to "ready for the market" without burning out the family.
 
 My job is to:
 

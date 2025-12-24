@@ -100,7 +100,7 @@ If you are still very early and just want a high level map, you can also read th
 
 ---
 
-## Step 1 â€“ Understand what makes Tucson estates a little different
+## Step 1 — Understand what makes Tucson estates a little different
 
 Tucson has its own mix of factors that show up in estate and senior transition properties:
 
@@ -125,7 +125,7 @@ For a deeper, non geo specific explanation of the service model, you can also re
 
 ---
 
-## Step 2 â€“ What I handle in and around Tucson
+## Step 2 — What I handle in and around Tucson
 
 Here is what I typically handle when a Tucson area property needs more than just a simple listing:
 
@@ -149,7 +149,7 @@ My value is in coordinating the property, vendors, and sale so the Tucson part m
 
 ---
 
-## Step 3 â€“ Where I work in and around Tucson
+## Step 3 — Where I work in and around Tucson
 
 Tucson itself is the primary hub, but there are nearby communities where it still makes sense for a Tucson based coordinator to lead the project.
 
@@ -175,7 +175,7 @@ For a wider view of where I work beyond Tucson, see the [Arizona hub](/az) and t
 
 ---
 
-## Step 4 â€“ Which Tucson service page should you read next
+## Step 4 — Which Tucson service page should you read next
 
 From this Tucson hub, you can move into the page that most closely matches your situation:
 
@@ -195,7 +195,7 @@ If your situation is a blend of these, just pick the one that feels closest, or 
 
 ---
 
-## Step 5 â€“ A quick note about legal, tax, and labor boundaries
+## Step 5 — A quick note about legal, tax, and labor boundaries
 
 Because this page speaks to Tucson as a hub, it is important to be clear about boundaries.
 

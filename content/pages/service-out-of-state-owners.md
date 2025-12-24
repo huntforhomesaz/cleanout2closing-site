@@ -45,9 +45,9 @@ Cleanout2Closing is built for exactly this situation.
 I act as your local point of contact in Tucson.  
 I coordinate cleanout, vendors, and the sale of the home so you can move from:
 
-- â€œI have no idea what is happening at that houseâ€  
+- "I have no idea what is happening at that house"  
 to  
-- â€œThe property is documented, cared for, and soldâ€
+- "The property is documented, cared for, and sold"
 
 without having to manage every small detail yourself.
 
@@ -102,7 +102,7 @@ We set clear rhythms for updates and use simple summaries so you can quickly see
 - An attorney or licensed fiduciary is involved and expects reasonable care of the property.  
 - You want your property decisions to make sense later if anyone asks questions.
 
-I organize the property side in a way that makes your attorney or fiduciaryâ€™s job easier.
+I organize the property side in a way that makes your attorney or fiduciary's job easier.
 
 ---
 
@@ -111,7 +111,7 @@ I organize the property side in a way that makes your attorney or fiduciaryâ€
 Even when you are far away, the process can be straightforward.  
 Here is how we usually move from first contact to closing.
 
-### Step 1 â€“ Talk about your role and your goals
+### Step 1 — Talk about your role and your goals
 
 We start with a call or video meeting.
 
@@ -123,9 +123,9 @@ We talk about:
 - What you want from the property: maximize value, exit quickly, or something in between.  
 - Any time or money constraints you are working under.
 
-The goal is to understand what â€œsuccessâ€ looks like for you before we touch the house.
+The goal is to understand what "success" looks like for you before we touch the house.
 
-### Step 2 â€“ Walk and document the property on your behalf
+### Step 2 — Walk and document the property on your behalf
 
 Next, I visit the property in person.
 
@@ -143,7 +143,7 @@ You receive:
 
 You can share this with family, your attorney, your fiduciary, or your financial advisor.
 
-### Step 3 â€“ Build a realistic path from â€œas-isâ€ to â€œsoldâ€
+### Step 3 — Build a realistic path from "as-is" to "sold"
 
 With a clear picture of the property, I outline a practical plan.
 
@@ -156,7 +156,7 @@ It includes:
 
 We review this together and adjust based on your comfort level and legal guidance.
 
-### Step 4 â€“ Coordinate vendors and protect access
+### Step 4 — Coordinate vendors and protect access
 
 Once you are comfortable with the plan, I begin coordinating vendors.
 
@@ -177,7 +177,7 @@ I:
 - Sequence vendors so they are not tripping over each other.  
 - Keep you updated with short, clear status reports.
 
-### Step 5 â€“ Prepare the home at the right level for your situation
+### Step 5 — Prepare the home at the right level for your situation
 
 Not every out-of-state owner wants or needs a full makeover.
 
@@ -188,9 +188,9 @@ We look at:
 - How your timeline and stress level factor in.
 
 From there, we choose a level of prep that fits your goals and constraints.  
-That might range from â€œlight clean and sell as-isâ€ to â€œmodest updates to reach a broader buyer pool.â€
+That might range from "light clean and sell as-is" to "modest updates to reach a broader buyer pool."
 
-### Step 6 â€“ List, sell, and close the property
+### Step 6 — List, sell, and close the property
 
 When the property is ready, I list and sell it as your Tucson Realtor.
 

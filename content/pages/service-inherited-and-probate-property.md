@@ -112,7 +112,7 @@ I provide a simple written plan, clear options, and calm communication so your g
 Every estate is unique, but the structure can be simple.  
 Here is how I typically move an inherited or probate property from first call to closing.
 
-### Step 1 â€“ Listen and understand your legal and family picture
+### Step 1 — Listen and understand your legal and family picture
 
 We start with a conversation, often by phone or video.
 
@@ -127,7 +127,7 @@ I ask about:
 The goal is not to quiz you.  
 The goal is to understand where you are so we can build a property plan that respects your legal and family realities.
 
-### Step 2 â€“ Walk and document the property
+### Step 2 — Walk and document the property
 
 Next, I walk the property.  
 If you are local, we can do this together. If you are out of state, I can walk it on your behalf.
@@ -142,7 +142,7 @@ I look at:
 I document what I see with photos and simple notes.  
 This becomes the foundation for decisions about what work is needed and what can be left alone.
 
-### Step 3 â€“ Build a clear, written plan from today to closing
+### Step 3 — Build a clear, written plan from today to closing
 
 Once we have the legal picture and the property picture, I put them together into a straightforward plan.
 
@@ -157,7 +157,7 @@ It usually includes:
 You end up with a simple document that everyone can see.  
 This alone often reduces anxiety because the path is no longer just in your head.
 
-### Step 4 â€“ Line up and coordinate vendors
+### Step 4 — Line up and coordinate vendors
 
 With your approval, I start lining up the right vendors in the right order.  
 Examples include:
@@ -173,7 +173,7 @@ You see the real numbers and approve work before it is scheduled.
 
 I coordinate their timing, access, and scope so the work matches your plan and your legal guidance.
 
-### Step 5 â€“ Prepare the home for the right level of sale
+### Step 5 — Prepare the home for the right level of sale
 
 Not every estate property needs a full makeover.  
 We decide together what level of prep makes sense based on:
@@ -191,7 +191,7 @@ This might mean:
 
 My job is to show you the tradeoffs in plain English and align the prep with your goals.
 
-### Step 6 â€“ List, sell, and close the property
+### Step 6 — List, sell, and close the property
 
 When the home is ready, I list and sell it as your Tucson Realtor.
 
@@ -295,7 +295,7 @@ In fact, it often helps to connect early so we can plan around:
 - What can be donated or sold.  
 - What should be removed before photos or showings.
 
-We can also align the property plan with your attorneyâ€™s expected timelines.
+We can also align the property plan with your attorney's expected timelines.
 
 ### What if different heirs disagree about how much work to do?
 

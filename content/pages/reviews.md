@@ -53,7 +53,7 @@ There are two main sources for the proof behind this site:
    Today, as a licensed Realtor in Tucson and a member of the Stratton Group at Keller Williams, I bring that same approach to estate property transitions.  
    My focus is on coordinating cleanout, vendors, and the home sale itself so families and professionals have one accountable point of contact.
 
-On this page, I separate â€œprior service companyâ€ proof from â€œreal estate and estate transitionâ€ proof, so you know exactly what you are looking at.
+On this page, I separate "prior service company" proof from "real estate and estate transition" proof, so you know exactly what you are looking at.
 
 ---
 
@@ -74,7 +74,7 @@ They talk about:
   Treating families, heirs, and seniors with patience. Respecting the home and belongings, even when items are headed for donation or disposal.
 
 - Ability to handle complex jobs  
-  Full houses. Tight timelines. Multiple vendors. Reviews often mention that projects felt â€œtoo bigâ€ until someone took charge and broke them into steps.
+  Full houses. Tight timelines. Multiple vendors. Reviews often mention that projects felt "too big" until someone took charge and broke them into steps.
 
 Cleanout2Closing is built to carry those same qualities into estate transitions that also involve a home sale, court timelines, and professional oversight.
 
@@ -88,7 +88,7 @@ To keep things honest and useful, it helps to know what you are looking at.
   These are from Grunt-Work LLC and related hands-on service work. They speak to my ability to manage crews, heavy jobs, and on-site logistics. They are not real estate reviews.
 
 - Real estate and estate transition reviews  
-  These are from clients, families, and professionals I have helped as a Realtor on estate and transition-related sales. They speak to the full â€œcleanout to closingâ€ journey.
+  These are from clients, families, and professionals I have helped as a Realtor on estate and transition-related sales. They speak to the full "cleanout to closing" journey.
 
 - Case studies  
   These are structured stories that show how an estate transition played out from start to finish. Some combine patterns from several similar projects to protect client privacy. When that is the case, it will be labeled as a composite example.
@@ -137,7 +137,7 @@ What we did:
 - Built a timeline that tied the move date to cleanout, donation pickups, and listing.  
 - Coordinated movers, cleanout vendors, and clean-up around medical appointments and routines.  
 - Recommended a level of prep that made sense for the home and neighborhood without over-improving.  
-- Guided the sale as their Realtor, keeping showings respectful of the ownerâ€™s comfort.
+- Guided the sale as their Realtor, keeping showings respectful of the owner's comfort.
 
 Outcome:
 
@@ -172,7 +172,7 @@ What we did:
 Outcome:
 
 - The family made a clear choice based on facts, not guesswork.  
-- The property moved from â€œwe should do something about that houseâ€ to closed sale.  
+- The property moved from "we should do something about that house" to closed sale.  
 - The personal representative had an organized record of options considered and steps taken.
 
 Not every estate property is a time capsule.  
@@ -182,7 +182,7 @@ Some are tired rentals. The process still works.
 
 ## How I work with professionals who care about proof
 
-If you are an attorney, fiduciary, or other professional, your lens on â€œreviewsâ€ is a little different.
+If you are an attorney, fiduciary, or other professional, your lens on "reviews" is a little different.
 
 You want to know:
 
@@ -206,7 +206,7 @@ When it makes sense, I am happy to provide professional references or connect yo
 To keep trust where it belongs, here is what this page is not:
 
 - It is not a substitute for doing your own due diligence.  
-- It is not a place for made-up numbers or fake â€œperfectâ€ stories.  
+- It is not a place for made-up numbers or fake "perfect" stories.  
 - It is not a promise that your situation will follow the exact same path.
 
 Every estate, every family, and every property is different.
@@ -223,7 +223,7 @@ What you can expect is the same underlying approach:
 
 ## What to do with this information
 
-If you are reading this page, you are probably somewhere between â€œjust researchingâ€ and â€œready to talk.â€
+If you are reading this page, you are probably somewhere between "just researching" and "ready to talk."
 
 Here is a simple way to use what you have seen:
 

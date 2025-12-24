@@ -77,7 +77,7 @@ That means a lot of homes are owned by:
 - Snowbirds and second-home owners  
 - Heirs, trustees, and personal representatives who live somewhere else
 
-If you are responsible for a Green Valley property and you are not in Southern Arizona, this page is for you. It explains how I help out-of-state owners get from â€œhouse I cannot see every weekâ€ to â€œdocumented sale through escrowâ€ without needing to micromanage every appointment.
+If you are responsible for a Green Valley property and you are not in Southern Arizona, this page is for you. It explains how I help out-of-state owners get from "house I cannot see every week" to "documented sale through escrow" without needing to micromanage every appointment.
 
 ---
 
@@ -165,9 +165,9 @@ Throughout, I keep your attorney or fiduciary in the loop so the sale supports t
 
 ## How the process works when you are not in Arizona
 
-Here is what a typical â€œcleanout to closingâ€ looks like for an out-of-state Green Valley owner:
+Here is what a typical "cleanout to closing" looks like for an out-of-state Green Valley owner:
 
-### Step 1 â€“ Quick call and role check
+### Step 1 — Quick call and role check
 
 We start by clarifying:
 
@@ -177,7 +177,7 @@ We start by clarifying:
 
 I coordinate with your attorney or fiduciary early so we all work from the same playbook.
 
-### Step 2 â€“ Walkthrough, photos, and a plan
+### Step 2 — Walkthrough, photos, and a plan
 
 I:
 
@@ -187,7 +187,7 @@ I:
 
 You receive a simple summary and visuals, which you can share with your professionals. From there, I draft a step-by-step plan with phases like: secure, sort and clean out, light prep, list, and sell.
 
-### Step 3 â€“ Contents and vendor execution
+### Step 3 — Contents and vendor execution
 
 Once you approve the plan:
 
@@ -197,17 +197,17 @@ Once you approve the plan:
 
 You get short updates with photos, not a flood of texts from five different companies.
 
-### Step 4 â€“ Pricing, listing, and showings
+### Step 4 — Pricing, listing, and showings
 
 With the property cleared and cleaned:
 
-- We review comparable sales and current inventory in Green Valleyâ€™s 55+ segments.   
+- We review comparable sales and current inventory in Green Valley's 55+ segments.   
 - We choose a pricing range and positioning (as-is vs lightly improved) that fits your goals and the market.  
 - I list the home on the MLS, coordinate professional photos, and manage showings.
 
 You do not need to be present for showings. Access and security are handled via lockboxes and agent instructions.
 
-### Step 5 â€“ Offers, negotiation, and escrow
+### Step 5 — Offers, negotiation, and escrow
 
 When offers come in:
 
@@ -270,6 +270,6 @@ When you are ready:
 
 - Tell me where you live, where the house is in Green Valley, and who is legally in charge.  
 - Share a short description of the property and your biggest worry about it right now.  
-- Ask for a simple, staged plan from â€œas-isâ€ to â€œclosed.â€
+- Ask for a simple, staged plan from "as-is" to "closed."
 
 You can start that conversation on the [/contact](/contact) page. I will follow up and help you decide whether I am the right fit and what a realistic, low-stress path forward looks like for your Green Valley property.

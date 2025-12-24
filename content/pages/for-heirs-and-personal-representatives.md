@@ -40,15 +40,15 @@ If you are reading this, you are probably carrying at least two things at once:
 
 You might have been named as:
 
-- An heir who has become the â€œpoint person,â€ or  
+- An heir who has become the "point person," or  
 - The personal representative / executor in the will, or  
 - A co-decision maker alongside siblings or other family members.
 
-On top of that, the house may be full of belongings, and the legal words â€œprobate,â€ â€œestate,â€ or â€œtrustâ€ are now part of your life.
+On top of that, the house may be full of belongings, and the legal words "probate," "estate," or "trust" are now part of your life.
 
 Cleanout2Closing exists to help with the property side of all this.
 
-This page is for you personally, not just â€œthe estate.â€  
+This page is for you personally, not just "the estate."  
 It explains what to do first, what to expect, and how I help you move the house from full and overwhelming to clean, documented, and sold.
 
 ---
@@ -57,30 +57,30 @@ It explains what to do first, what to expect, and how I help you move the house 
 
 Every situation is different, but heirs and personal representatives tend to ask the same questions at the beginning.
 
-### â€œWhat should I do first with the house?â€
+### "What should I do first with the house?"
 
 Common fears:
 
-- â€œIf I touch anything before court, am I in trouble?â€  
-- â€œDo I have to clean everything out before we can even talk about selling?â€  
-- â€œIs there a step-by-step list of what happens with the house in probate?â€
+- "If I touch anything before court, am I in trouble?"  
+- "Do I have to clean everything out before we can even talk about selling?"  
+- "Is there a step-by-step list of what happens with the house in probate?"
 
 What usually helps:
 
 - Making sure the property is secure and basic utilities are safe.  
 - Clarifying your role and authority with your attorney or the court.  
-- Getting a clear picture of the homeâ€™s condition before making big decisions.
+- Getting a clear picture of the home's condition before making big decisions.
 
 You do not have to figure that list out by yourself.  
 Part of my job is helping you see which property steps make sense at each stage.
 
-### â€œHow do I handle my siblings or other heirs?â€
+### "How do I handle my siblings or other heirs?"
 
 Common fears:
 
-- â€œWe are already arguing, and we have not even started.â€  
-- â€œI do not want to be accused of doing the wrong thing.â€  
-- â€œSome of us want to sell as-is, others want to fix everything.â€
+- "We are already arguing, and we have not even started."  
+- "I do not want to be accused of doing the wrong thing."  
+- "Some of us want to sell as-is, others want to fix everything."
 
 What usually helps:
 
@@ -88,15 +88,15 @@ What usually helps:
 - Real numbers for different levels of prep and sale.  
 - A neutral voice who is not another family member.
 
-I cannot fix every family dynamic, but I can give everyone the same property facts so you are arguing less about â€œwhat is trueâ€ and more about â€œwhat choice makes sense.â€
+I cannot fix every family dynamic, but I can give everyone the same property facts so you are arguing less about "what is true" and more about "what choice makes sense."
 
-### â€œWhat if I do something the court wonâ€™t like?â€
+### "What if I do something the court won't like?"
 
 Common fears:
 
-- â€œIf I make a mistake with the house, can I get in legal trouble?â€  
-- â€œWill the judge or my attorney think I handled things badly?â€  
-- â€œWhat needs written approval before we move ahead?â€
+- "If I make a mistake with the house, can I get in legal trouble?"  
+- "Will the judge or my attorney think I handled things badly?"  
+- "What needs written approval before we move ahead?"
 
 What usually helps:
 
@@ -111,7 +111,7 @@ I keep the property and vendor side organized so your legal team has what they n
 
 ## How I help heirs and personal representatives specifically
 
-Cleanout2Closing is built around your reality as an heir or personal representative, not just â€œanother listing.â€
+Cleanout2Closing is built around your reality as an heir or personal representative, not just "another listing."
 
 Here is what that looks like in practice.
 
@@ -140,7 +140,7 @@ I:
 
 You get a simple, clear summary you can share with siblings, your attorney, or a fiduciary.
 
-### 3. Build a simple plan from â€œtodayâ€ to â€œclosingâ€
+### 3. Build a simple plan from "today" to "closing"
 
 Once we know your role and what the property looks like in real life, I draft a straightforward plan that:
 
@@ -153,7 +153,7 @@ You finally have something you can show the rest of the family instead of trying
 
 ### 4. Coordinate vendors so you are not the project manager
 
-With your approval (and your attorney or fiduciaryâ€™s when needed), I:
+With your approval (and your attorney or fiduciary's when needed), I:
 
 - Gather estimates from cleanout, estate sale, donation, cleaning, landscaping, and repair vendors.  
 - Help you compare those estimates in plain English.  
@@ -175,9 +175,9 @@ We talk honestly about:
 
 The goal is to make decisions you can explain later:
 
-- â€œHere were our options.â€  
-- â€œHere is what we chose, and why.â€  
-- â€œHere are the records to back it up.â€
+- "Here were our options."  
+- "Here is what we chose, and why."  
+- "Here are the records to back it up."
 
 ### 6. Represent the estate or trust in the sale
 
@@ -226,7 +226,7 @@ You and your fiduciary or accounting team remain responsible for all accounting 
 
 ---
 
-## Common â€œheir and PRâ€ questions
+## Common "heir and PR" questions
 
 ### Do I have to wait until probate is finished to talk to you?
 
@@ -240,7 +240,7 @@ Within that guidance, we can often:
 - Plan cleanout and vendor work.  
 - Prepare for a sale as soon as it is legally allowed.
 
-### What if my siblings donâ€™t trust each other?
+### What if my siblings don't trust each other?
 
 That is common, especially when money and memories are both involved.
 

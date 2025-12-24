@@ -104,7 +104,7 @@ If you already know your property is in Tucson, you can also go straight to:
 
 ---
 
-## Step 1 â€“ Start with Tucson and the immediate surrounding communities
+## Step 1 — Start with Tucson and the immediate surrounding communities
 
 Cleanout2Closing is built around one promise: I coordinate everything from cleanout to closing, so families do not have to manage all the moving parts alone. 
 
@@ -135,7 +135,7 @@ For more detail on what I handle in Tucson itself, see:
 
 ---
 
-## Step 2 â€“ How I look at properties further away
+## Step 2 — How I look at properties further away
 
 There are times when a property sits outside my usual map but the situation is still a strong fit. For example:
 
@@ -159,7 +159,7 @@ Sometimes the answer is yes. Other times the better move is for me to map out th
 
 ---
 
-## Step 3 â€“ Out-of-state owners with Tucson-area properties
+## Step 3 — Out-of-state owners with Tucson-area properties
 
 Many of my clients live in another state while the property is here in Southern Arizona. In those cases, my role is to be:
 
@@ -180,7 +180,7 @@ For more on how this looks in practice, you can read the [inherited and probate 
 
 ---
 
-## Step 4 â€“ When I am not the right fit
+## Step 4 — When I am not the right fit
 
 Being clear about fit is important for everyone involved. I am usually **not** the right option when:
 
@@ -195,7 +195,7 @@ If you are not sure which side your situation falls on, send me a quick note thr
 
 ---
 
-## Quick checklist â€“ Is your property likely in my current service area
+## Quick checklist — Is your property likely in my current service area
 
 You can use this simple checklist as a starting point:
 

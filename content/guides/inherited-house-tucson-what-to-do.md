@@ -23,7 +23,7 @@ geo:
 
 faq_block:
   - question: "Do I have to do anything with the house before the probate case is finished?"
-    answer: "Often you can start planning and light prep during probate, but major decisions and a sale should line up with your attorney or fiduciaryâ€™s guidance. I help coordinate cleanout, vendors, and sale timing so it fits the legal process that your attorney oversees."
+    answer: "Often you can start planning and light prep during probate, but major decisions and a sale should line up with your attorney or fiduciary's guidance. I help coordinate cleanout, vendors, and sale timing so it fits the legal process that your attorney oversees."
     audience: "heir"
     schema: true
 
@@ -296,6 +296,6 @@ If you would like, you can:
 - Tell me a little about the property and any concerns you already see.  
 - Ask for a no pressure walk through and options summary.
 
-From there, I can outline a cleanout to closing plan that fits your legal timeline and your familyâ€™s comfort level.
+From there, I can outline a cleanout to closing plan that fits your legal timeline and your family's comfort level.
 
 When you are ready, you can reach out through the contact page at [/contact](/contact) and tell me what you are facing. I will follow up, usually within one business day, so you have a clear picture of your options and next steps.

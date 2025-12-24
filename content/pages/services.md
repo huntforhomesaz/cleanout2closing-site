@@ -51,7 +51,7 @@ No matter which category you fall into, the foundation is the same:
 
 - Understand your situation, timelines, and decision makers.  
 - Walk the property and document what is really needed to get it ready.  
-- Build a clear written plan from â€œwhere things are todayâ€ to â€œkeys handed over at closing.â€  
+- Build a clear written plan from "where things are today" to "keys handed over at closing."  
 - Coordinate vendors and keep the work aligned with your legal and family needs.  
 - Represent you as your Tucson Realtor so you have one accountable point of contact.
 
@@ -76,9 +76,9 @@ There may be a full house of belongings, court timelines, and relatives in diffe
 
 Good fit if:
 
-- You are an heir, personal representative, or informal â€œpoint personâ€ for the property.  
+- You are an heir, personal representative, or informal "point person" for the property.  
 - Probate or trust paperwork is in progress or finished, but the house still feels stuck.  
-- You want a clear path from â€œoverwhelmingâ€ to â€œsold,â€ with one property contact.
+- You want a clear path from "overwhelming" to "sold," with one property contact.
 
 What I do in this service:
 
